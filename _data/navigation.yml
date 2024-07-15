@@ -1,9 +1,15 @@
 main:
   - title: "Posts"
     url: /posts/
-  - title: "Categories"
-    url: /categories/
   - title: "Tags"
     url: /tags/
   - title: "About"
     url: /about/
+
+docs:
+  - title: My Books
+    children:
+      - title: "Learn Docker in a MoL"
+        url: https://amzn.to/4eiSGKg
+      - title: "Learn Kubernetes in a MoL"
+        url: https://amzn.to/3x3O7mt

@@ -13,16 +13,27 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: Elton's Blog
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+  Notes from the field of freelance IT consultant and trainer Elton Stoneman - 
+  15x Microsoft MVP, Docker Captain and author for Pluralsight and Manning.
+twitter_username: eltonstoneman
+github_username: sixeyed
 minimal_mistakes_skin: default
 search: true
+
+url: https://sixeyed.github.io
+repository: sixeyed/blog-sixeyed-com
+
+paginate: 5 # amount of posts to show
+paginate_path: /page/:num/
+
+atom_feed:
+  path: /rss
+
+feed:
+  path: /rss
 
 # Build settings
 markdown: kramdown
@@ -56,22 +67,23 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 author:
-  name   : "First Lastname"
+  name   : "Elton Stoneman"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Freelance consultant and trainer. 15x Microsoft MVP. Manning Author. Pluralsight Author. "
   links:
-    - label: "Website"
+    - label: "Pluralsight"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://pluralsight.pxf.io/YMBGB"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
-    - label: "Instagram"
+    - label: "YouTube"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
@@ -94,11 +106,16 @@ defaults:
       type: posts
     values:
       layout: single
+      toc: true
+      toc_sticky: true
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
+      show_date: true
+      sidebar:
+        nav: "docs"
   # _pages
   - scope:
       path: "_pages"
@@ -106,10 +123,21 @@ defaults:
     values:
       layout: single
       author_profile: true
+  - scope:
+      path: "content/images"
+    values:
+      image: true
 
-category_archive:
-  type: liquid
-  path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
+
+minimal_mistakes_skin: "mint"
+enable_copy_code_button: true
+repository: "sixeyed/blog-sixeyed-com"
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-light" # "github-dark"
+    issue_term: "pathname"

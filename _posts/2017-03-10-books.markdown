@@ -1,0 +1,118 @@
+---
+title: Books
+date: '2017-03-10 13:35:16'
+---
+
+I've written a few books - all technical - and there's usually one or two in the pipeline. (I didn't write any of the books in the photo).
+
+## [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/)
+
+![](/content/images/2018/01/docker-on-windows-small.jpg)
+
+A comprehensive guide to Docker and Windows containers. Covers everything from the 101, through to packaging .NET apps and SQL Server databases in Docker, modernizing application architecture and running with high-availability and scale in production. This one you have to pay for...
+
+> Get [Docker for Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/) on Amazon
+
+But the [source code](https://github.com/sixeyed/docker-on-windows) is on GitHub, and I cover the Docker images from the book in the [Windows Weekly Dockerfile](/tag/weekly-dockerfile/) blog series. And I often have copies to give away when I'm speaking :)
+
+Contents:
+
+- Getting Started with Docker on Windows
+- Packaging and Running Applications as Docker Containers
+- Developing Dockerized .NET and .NET Core Applications
+- Pushing and Pulling Images from Docker Registries
+- Adopting Container-First Solution Design
+- Organizing Distributed Solutions with Docker Compose
+- Orchestrating Distributed Solutions with Docker Swarm
+- Administering and Monitoring Dockerized Solutions
+- Understanding the Security Risks and Benefits of Docker
+- Powering a Continuous Deployment Pipeline with Docker
+- Debugging and Instrumenting Application Containers
+- Containerize What You Know: Guidance for Implementing Docker
+
+## [Docker Succinctly](https://www.syncfusion.com/ebooks/docker_succinctly)
+
+A **free** eBook from Syncfusion, introducing Docker. Mainly focused on Linux, although it does cover Docker on Windows and ARM devices (like the Raspberry Pi):
+
+![Docker Succinctly](/content/images/2018/02/docker-succinctly.png)
+
+Contents:
+
+TABLE OF CONTENTS  
+Containers have revolutionized software development, allowing developers to bundle their applications with everything they need, from the operating system up, into a single package. Docker is one of the most popular platforms for containers, allowing them to be hosted on-premises or on the cloud, and to run on Linux, Windows, and Mac machines. With Docker Succinctly by Elton Stoneman, learn the basics of building Docker images, sharing them on the Docker Hub, orchestrating containers to deliver large applications, and much more.
+
+- Introducing Docker
+- Packaging Applications with Docker
+- Image Registries and the Docker Hub
+- Data Storage in Docker
+- Orchestrating Systems with Docker
+- Clustering Hosts with Docker Swarm
+- Docker on Linux, Windows, and ARM
+- Running Docker in the Cloud
+- Continuing Your Docker Journey
+
+## The Big Data Trilogy
+
+Three **free** eBooks from [Syncfusion's "Succinctly" series](https://www.syncfusion.com/resources/techportal/ebooks/).
+
+Together they form an introduction to Big Data - starting with [Hadoop](http://hadoop.apache.org), moving on to [Hive](http://hive.apache.org) and finishing with [HBase](http://hbase.apache.org).
+
+I have a trilogy of Pluralsight courses covering Big Data too:
+
+- [Hadoop for .NET Developers](http://shrsl.com/?gvb9)
+- [HDInsight Deep Dive: Storm, HBase, and Hive](http://shrsl.com/?~cfr2)
+- [Real World Big Data in Azure](http://shrsl.com/?~cfr4)
+
+### [Hadoop Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/hadoopsuccinctly)
+
+![Hadoop Succinctly book cover](/content/images/2017/03/hadoopebookcover--1-.png)
+
+Contents:
+
+- Introducing Hadoop
+- Getting Started with Hadoop
+- HDFS—The Hadoop Distributed File System
+- YARN—Yet Another Resource Negotiator
+- Hadoop Streaming
+- Inside the Cluster
+- Hadoop Distributions
+- The Hadoop Ecosystem
+
+* * *
+
+### [Hive Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/Hive-Succinctly)
+
+![Hive Succinctly book cover](/content/images/2017/03/Hive-Succinctly_img.png)
+
+Contents:
+
+- Introducing Hive
+- Running Hive
+- Internal Hive Tables
+- External Tables over HDFS
+- External Tables over HBase
+- ETL with Hive
+- DDL and DML in Hive
+- Partitioning Data
+- Querying with HiveQL
+
+* * *
+
+### [HBase Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/hbase)
+
+![HBase Succinctly book cover](/content/images/2017/03/hbase-succinctly.png)
+
+Contents:
+
+- Introducing HBase
+- Hbase and the HBase Shell
+- HBase Table Design
+- Connecting with the Java API
+- Connecting with Python and Thrift
+- Connecting with .NET and Stargate
+- The Architecture of HBase
+- Inside the Region Server
+- Monitoring and Administering HBase
+
+* * *
+<!--kg-card-end: markdown-->

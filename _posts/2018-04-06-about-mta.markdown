@@ -1,0 +1,131 @@
+---
+title: What We Talk About When We Talk About "Modernizing Traditional Apps"
+date: '2018-04-06 16:14:56'
+tags:
+- windows
+- docker
+- mta
+---
+
+Last month was Docker's fifth birthday, and the [Docker platform has come a long way](https://jaxenter.com/docker-look-back-leap-forward-142745.html) in that time. One of the biggest - and most exciting - developments for me is how enterprises are embracing containers for their existing application landscapes.
+
+You can run your brand-new microservices apps in Linux containers alongside your existing .NET 3.5 apps in Windows containers, **on the same Docker cluster**. You build, deploy, and manage all the parts of those apps in the same way, and you choose whether to leave that .NET WebForms app running as a monolith in a single container, or to start breaking it down into a distributed application.
+
+Moving Windows apps to Docker lets you modernize them at your own pace. Existing .NET 3.5 apps can be run in Docker as-is with no code changes, and moved to any cloud or onto modern infrastructure. Current projects can be incrementally rebuilt in lightweight .NET Core services spanning multiple containers.
+
+## What Are "Traditional" Apps?
+
+I talk about _traditional_ apps, rather than _legacy_ or _heritage_ apps. That's because the apps that need modernizing may not actually be very old. .NET apps that were designed as recently as the last couple of years are likely to use traditional approaches, which make them difficult to develop and manage:
+
+- monolithic code bases that need full regression tests, even for minor changes
+- manual deployment processes, or complex automated processes that use multiple technologies
+- unclear dependencies, so every app runs in an isolated VMs to prevent interference
+- myriad management and deployment tools - every app is a snowflake.
+
+> There's a simple way to test if your app could use modernizing. When a new dev joins the team with a new laptop, can they set up the toolchain, clone the source code, build and then run the app in 30 minutes?
+
+Highly unlikely for traditional apps. You'd still be installing the right version of Visual Studio when your 30 minutes are up. But with Docker you can package your build tools in a Docker image and use containers to build _and_ run the app, and that 30-minute setup is a reality.
+
+Try it yourself with the sample .NET app from my [Modernizing .NET Apps with Docker](https://www.youtube.com/watch?v=yksOaJ7wZRY&list=PLkA60AVN3hh8mDYH0V8XpLpjzDHXrReFN) video series on YouTube. Here's your dependency list:
+
+- Windows 10 with [Docker for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+- _or Windows Server 2016 with [Docker Enterprise Edition](https://store.docker.com/editions/enterprise/docker-ee-server-windows)_
+- [Git for Windows](https://gitforwindows.org)
+
+That's it. Then run these commands:
+
+    # clone source and switch to Part 3 branch
+    git clone https://github.com/dockersamples/mta-netfx-dev.git
+    cd mta-netfx-dev
+    git checkout part-3
+    
+    # build all the components
+    docker-compose `
+      -f ./app/docker-compose.yml `
+      -f ./app/docker-compose-local.yml `
+      -f ./app/docker-compose-build.yml `
+      build
+    
+    # run the whole solution
+    docker-compose `
+      -f ./app/docker-compose.yml `
+      -f ./app/docker-compose-local.yml `
+      up -d
+
+Browse to the `signup-app` container and you'll be running a .NET WebForms app which has been modernized to use event publishing - there's a message queue, database and message handler all running in containers too.
+
+If those steps take more than 30 minutes, blame the speed of your Internet connection :)
+
+## Where Docker Fits In
+
+Apps need consistency, so your whole estate can be built, deployed and managed in the same way. Docker brings consistency to traditional apps with consistent packaging and a consistent user experience. When you run your apps in Docker containers, you use the same tools and processes everywhere, no matter what the app is doing or what technology it uses.
+
+> [Every part of the sample app has a Dockerfile](https://github.com/dockersamples/mta-netfx-dev/tree/part-3/docker) to package the component. Docker Compose can build every component in one command, which makes CI/CD super easy.
+
+My sample app runs full .NET Framework components in Windows containers. Compare that to this [microservices demo app on GitHub](https://github.com/microservices-demo/microservices-demo) - it's a distributed app using multiple tech stacks (Java, Go, NodeJS, .NET Core), all running in Linux containers. Each of those components has a Dockerfile, and you can deploy the app to a Docker cluster with a Compose file. It's the same tools, artifacts and processes for new apps and old apps.
+
+Moving your traditional apps to Docker can be the first step in modernizing the application architecture too - and you choose how far you want to go.
+
+## The Modernization Spectrum
+
+Modern apps run in small components with distinct responsibilities, which can be independently scaled and updated. Traditional .NET apps run in large monolithic components, which are slow and risky to change. It will be a significant project to break large enterprise apps into small, connected components. Some apps will justify the investment, but for others you will get far better ROI just by running the existing monolith in a container.
+
+Docker supports the full spectrum of modernization projects:
+
+![Application modernization spectrum](/content/images/2018/04/mta-spectrum-1.png)
+
+### 1. Migrate as-is
+
+Moving your application into Docker with no code changes is the simplest way to start modernizing. You can write a [Dockerfile to build and package your .NET app from source](https://github.com/dockersamples/mta-netfx-dev/blob/part-1/docker/web/Dockerfile), or you can write a [Dockerfile which uses existing artifacts like MSIs](https://github.com/sixeyed/docker-windows-workshop/blob/master/part-2/web-1.0/Dockerfile).
+
+### 2. Adopt the platform idioms
+
+Docker doesn't make any demands on the apps running in containers, but you can use more Docker features if your apps conform to common standards. You can modify the configuration and deployment of .NET apps to [integrate with Docker’s logging and configuration features](https://github.com/dockersamples/mta-netfx-dev/blob/part-3/docker/web/start.ps1), still without changing code.
+
+### 3. Adapt to the new runtime
+
+If you're actively developing an app, you can start making minor code changes to take advantage of the platform features in Docker. Reading sensitive configuration data from separate files lets you use Docker’s secure secret management; using shared state rather than a local store lets your app scale horizontally.
+
+### 4. Extract features into separate containers
+
+You don't need a full re-architecture, you can break key features out of your app and plug the components together with Docker. Pain points in the existing app are good candidates for extraction: features which perform badly, or have security concerns, or are frequently changed.
+
+### 5. Rebuild and renew
+
+Apps which justify a rebuild project will benefit from Docker's flexibility. You can break your app into small components, and use the right technology stack for each part. You can drop production-grade software into your solution from Docker Store, and upgrade custom components to use the latest approaches and frameworks.
+
+> I demonstrate all these techniques in my Pluralsight course, [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker), and my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/).
+
+## Getting Started with your First App
+
+A short proof-of-concept project will show you how quickly you can move apps to Docker, and the benefits you get from the platform. You can expect to have a POC running in a day or two with a simple application, without having to change any code.
+
+An ASP.NET web application with one or more tiers, which stores state in SQL Server is a good first choice. You don’t have to choose an app with a small codebase, but the fewer integrations with other components, the more quickly you will have it running in Docker.
+
+A roadmap for your POC is to start with one component, and then move the remaining components to Docker. As an example, this is a classic n-tier application with a web front end, a service layer and a data layer:
+
+![My first MTA](/content/images/2018/04/mta-first-app.JPG)
+
+### 1. Web front end
+
+An ASP.NET app using WebForms or MVC is simple to move to Docker - package the web content on top of [Microsoft’s ASP.NET image](https://hub.docker.com/r/microsoft/aspnet/), which uses IIS to host the site.
+
+### 2. Service layer
+
+WCF or ASMX Web Services can be packaged to run on top of IIS, or they can use the Windows Server Core image and run as a self-hosted console application.
+
+### 3. Database layer
+
+You can package your database schema into the [SQL Server image from Docker Hub](https://hub.docker.com/r/microsoft/aspnet/). In dev and test you can run your database in a container, and you can use a container to publish schema updates to your existing production database.
+
+After the POC your application will be running completely in containers, and anyone in the dev or ops team can run the app without needing .NET, IIS or SQL Server installed - the only prerequisite is Docker:
+
+![After moving to Docker](/content/images/2018/04/mta-first-app-after.JPG)
+
+## The Docker on Windows Workshop
+
+If you want a guided approach to getting started with Windows containers and modernizing .NET apps, the content for my [Docker on Windows workshop](https://dockr.ly/windows-workshop) is all on GitHub.
+
+Go Dockerize! (and by sure to [add Docker to your CV](http://providepeople.com/why-it-pros-need-container-docker-skills-in-2018/)).
+
+<!--kg-card-end: markdown-->

@@ -1,0 +1,42 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+$right-sidebar-width-narrow: 120px !default;
+$right-sidebar-width: 200px !default;
+$right-sidebar-width-wide: 300px !default;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.sidebar .author__name {
+    text-transform: uppercase;
+    background-color: aliceblue;
+    margin: 0.5rem 0;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.masthead {
+    background-color: aliceblue;
+}
+
+.greedy-nav {
+    background-color: aliceblue;
+}
+
+.nav__sub-title {
+    background-color: aliceblue;
+    font-size: $type-size-5;
+}
+
+.no--margin {
+    margin: 0 !important;
+}
+
+.notice--info {
+    font-size: 1em !important;
+}
