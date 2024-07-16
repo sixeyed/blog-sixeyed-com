@@ -5,6 +5,7 @@ tags:
 - tracing
 - opentelemetry
 - dotnet
+description: Part 2 of the distributed tracing serires, walks through running the demo code in Docker containers and visualizing traces in Tempo.
 header:
   teaser: /content/images/2024/07/workflow-2-error.png
 ---

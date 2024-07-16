@@ -5,6 +5,7 @@ tags:
 - tracing
 - opentelemetry
 - dotnet
+description: Distributed tracing isn't just for internal processes. Part 1 of a series using OpenTelemetry to record traces for workflows in an external system.
 header:
   teaser: /content/images/2024/07/workflow-1-tempo.png
 ---
