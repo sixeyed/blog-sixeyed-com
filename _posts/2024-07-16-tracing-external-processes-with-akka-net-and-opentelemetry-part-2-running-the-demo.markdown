@@ -1,10 +1,15 @@
 ---
-layout: post
-title: 'Tracing External Processes with Akka.NET and OpenTelemetry: Part 2 (Running
-  the Demo)'
+title: 'Tracing External Processes with Akka.NET and OpenTelemetry: Part 2 (Running the Demo)'
+date: '2024-07-16 10:00:00'
+tags:
+- tracing
+- opentelemetry
+- dotnet
+header:
+  teaser: /content/images/2024/07/workflow-2-error.png
 ---
 
-In the [last post]( __GHOST_URL__ /tracing-external-processes-with-akka-net-and-opentelemetry-part-1-the-code/) I introduced a client project where I'm using OpenTelemetry and Akka.NET to collect traces for processes running in an external system. I've worked up a [simplified demo on GitHub](https://github.com/sixeyed/tracing-external-workflows) so you can see how it works for yourself.
+In the [last post](/tracing-external-processes-with-akka-net-and-opentelemetry-part-1-the-code/) I introduced a client project where I'm using OpenTelemetry and Akka.NET to collect traces for processes running in an external system. I've worked up a [simplified demo on GitHub](https://github.com/sixeyed/tracing-external-workflows) so you can see how it works for yourself.
 
 Just a couple of pre-requisites and you can run this in Docker and/or Kubernetes:
 
@@ -12,14 +17,16 @@ Just a couple of pre-requisites and you can run this in Docker and/or Kubernetes
 - [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.4) (if you want to use my scripts)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-    git clone https://github.com/sixeyed/tracing-external-workflows.git
+```
+git clone https://github.com/sixeyed/tracing-external-workflows.git
     
-    cd tracing-external-workflows
+cd tracing-external-workflows
     
-    ./scripts/docker/run.ps1
+./scripts/docker/run.ps1
     
-    # or if you don't have PowerShell:
-    # docker compose -f docker/docker-compose.yml -f docker/docker-compose-monitoring.yml up -d
+# or if you don't have PowerShell:
+# docker compose -f docker/docker-compose.yml -f docker/docker-compose-monitoring.yml up -d
+```
 
 That will start a bunch of containers running:
 
@@ -46,7 +53,8 @@ What we have here is the real stack for monitoring, and a dummy stack for genera
 - [the Workflow Generator](https://github.com/sixeyed/tracing-external-workflows/blob/main/src/tools/Tracing.WorkflowGenerator/WorkflowMessagePublisher.cs) is a simple tool which simulates batch processing by publishing a bunch of WorkflowStarted events to Redis, which kicks off all the monitoring in the back end;
 - [Tempo](https://grafana.com/oss/tempo/) is a collector for distributed traces, with a simple storage model. It replaces Jaeger or Zipkin and can ingest the standard OpenTelemetry protocols. 
 
-> I use Jaeger in my 5\* [Pluralsight course - Getting Started with Istio](https://pluralsight.pxf.io/4PXQn0) but Tempo is nice alternative and integrates very well with Grafana.
+I use Jaeger in my 5\* [Pluralsight course - Getting Started with Istio](https://pluralsight.pxf.io/4PXQn0) but Tempo is nice alternative and integrates very well with Grafana.
+{: .notice--info}
 
 - [Grafana](https://grafana.com/oss/grafana/) is configured to read trace data from Tempo. In the real system the worker collects additional metrics which we store in Prometheus, and this stack gives us a single UI for dashboards and trace visualization.
 
@@ -54,7 +62,8 @@ What we have here is the real stack for monitoring, and a dummy stack for genera
 
 If you want to follow the logic through the different components, they all publish logs which you can see in Docker - the API lists the random durations it generates for each workflow:
 
-<figure class="kg-card kg-code-card"><pre><code>&gt; docker logs tracing-sample-api-1
+```
+> docker logs tracing-sample-api-1
 
 dbug: External.Api.WorkflowEntityStateMachine[0]
       DataLoader: 9f623b49-1a25-4759-bc2e-f1bcca307a50 will transition to status: Processing; after: 13s
@@ -64,22 +73,24 @@ dbug: External.Api.WorkflowStateMachine[0]
       Workflow: e730bcce-609f-494d-860e-84af7df37ccf added new entity: DataLoader
 dbug: External.Api.WorkflowEntityStateMachine[0]
       DataLoader: b1bc2564-66d0-46b4-9564-7a6da7f74a27 transitioned to status: Completed</code></pre>
-<figcaption>&gt;</figcaption></figure>
+```
 
 And the worker lists the tracing activity:
 
-    > docker logs tracing-sample-worker-1
+```
+> docker logs tracing-sample-worker-1
     
-    Creating monitor actor for: 3e2fef36-109f-4f99-af10-bc7670b4f997
-    Monitor: WorkflowMonitor starting; initialDelaySeconds: 5; intervalSeconds: 10; timeoutMinutes 10
-    Started activity. Is recording: True
-    Set activity tags
-    Refresh timer triggered
-    Loaded workflow
-    Updating entity
-    Update received
+Creating monitor actor for: 3e2fef36-109f-4f99-af10-bc7670b4f997
+Monitor: WorkflowMonitor starting; initialDelaySeconds: 5; intervalSeconds: 10; timeoutMinutes 10
+Started activity. Is recording: True
+Set activity tags
+Refresh timer triggered
+Loaded workflow
+Updating entity
+Update received
+```
 
-The worker is configured with two exporters - the console exporter prints traces when they complete, and the OTLP Exporter sends data to Tempo (set up using the OTEL\_EXPORTER\_OTLP\_PROTOCOL and OTEL\_EXPORTER\_OTLP\_ENDPOINT environment vairables). It'll take a few minutes for the dummy Workflows to start completing, and when they do you'll see log entries like this in the worker from the console exporter - in this example the Workflow ended with an error state:
+The worker is configured with two exporters - the console exporter prints traces when they complete, and the OTLP Exporter sends data to Tempo (set up using the `OTEL_EXPORTER_OTLP_PROTOCOL` and `OTEL_EXPORTER_OTLP_ENDPOINT` environment vairables). It'll take a few minutes for the dummy Workflows to start completing, and when they do you'll see log entries like this in the worker from the console exporter - in this example the Workflow ended with an error state:
 
     Stopped activity, status: Error
     Stopping WorkflowEntityMonitor actor for: DataLoader
@@ -118,56 +129,64 @@ The worker is configured with two exporters - the console exporter prints traces
 
 You can open Grafana at http://localhost:3000/explore - no credentials needed for this deployment. Tempo is already configured as a data source, so you can select the _Search_ tab and explore the traces coming in:
 
-<figure class="kg-card kg-image-card"><img src=" __GHOST_URL__ /content/images/2024/07/image-1.png" class="kg-image" alt loading="lazy" width="1072" height="628" srcset=" __GHOST_URL__ /content/images/size/w600/2024/07/image-1.png 600w, __GHOST_URL__ /content/images/size/w1000/2024/07/image-1.png 1000w, __GHOST_URL__ /content/images/2024/07/image-1.png 1072w" sizes="(min-width: 720px) 720px"></figure>
+![Searching for workflows in Grafana](/content/images/2024/07/workflow-2-grafana-search.png)
 
 Traces aren't shown in their entirety until all the child spans are complete, but when that happens you can drill into a Workflow to see the details:
 
-<figure class="kg-card kg-image-card"><img src=" __GHOST_URL__ /content/images/2024/07/image-2.png" class="kg-image" alt loading="lazy" width="1892" height="858" srcset=" __GHOST_URL__ /content/images/size/w600/2024/07/image-2.png 600w, __GHOST_URL__ /content/images/size/w1000/2024/07/image-2.png 1000w, __GHOST_URL__ /content/images/size/w1600/2024/07/image-2.png 1600w, __GHOST_URL__ /content/images/2024/07/image-2.png 1892w" sizes="(min-width: 720px) 720px"></figure>
+![Visualizing a workflow as a trace](/content/images/2024/07/workflow-1-tempo.png)
 
 The OpenTelemtry spec lets you record additional data with traces and spans as tags (arbitrary key-value pairs) and events (with timestamps). The Workflow monitor actor sets the key details when it starts the Activity:
 
-    Activity = Instrumentation.Tracing.ActivitySource.StartActivity(ActivityName, ActivityKind.Internal);
+```csharp
+Activity = Instrumentation.Tracing.ActivitySource.StartActivity(ActivityName, ActivityKind.Internal);
     
-    if (Activity != null)
-    {
-      Activity.AddTagIfNew("workflowId", started.WorkflowId);
-      Activity.AddEvent(new ActivityEvent("Submitted", new DateTimeOffset(started.SubmittedAt)));
-    }
+if (Activity != null)
+{
+  Activity.AddTagIfNew("workflowId", started.WorkflowId);
+  Activity.AddEvent(new ActivityEvent("Submitted", new DateTimeOffset(started.SubmittedAt)));
+}
+```
 
 Activity objects record the start time when you create them, but you can override that if you have more accurate data. In this case we get the real start time when we poll the external API, and we can set that in the update logic, along with any new tags. We also track changes in status as events:
 
-    Activity.SetStartTime(updated.GetStartTime());
+```csharp
+Activity.SetStartTime(updated.GetStartTime());
     
-    Activity.AddTagIfNew("startTime", workflow.WorkflowStartTime)
-             .AddTagIfNew("endTime", workflow.WorkflowEndTime);
+Activity.AddTagIfNew("startTime", workflow.WorkflowStartTime)
+        .AddTagIfNew("endTime", workflow.WorkflowEndTime);
     
-    var currentStatus = updated.GetStatus();
-    if (currentStatus != _lastStatus)
-    {
-      Activity.AddEvent(new ActivityEvent(currentStatus));
-      _lastStatus = currentStatus;
-    }
+var currentStatus = updated.GetStatus();
+if (currentStatus != _lastStatus)
+{
+  Activity.AddEvent(new ActivityEvent(currentStatus));
+  _lastStatus = currentStatus;
+}
+```
 
 Those shows nicely in Grafana, showing the timestamp relative to the span:
 
-<figure class="kg-card kg-image-card"><img src=" __GHOST_URL__ /content/images/2024/07/image-3.png" class="kg-image" alt loading="lazy" width="1892" height="1068" srcset=" __GHOST_URL__ /content/images/size/w600/2024/07/image-3.png 600w, __GHOST_URL__ /content/images/size/w1000/2024/07/image-3.png 1000w, __GHOST_URL__ /content/images/size/w1600/2024/07/image-3.png 1600w, __GHOST_URL__ /content/images/2024/07/image-3.png 1892w" sizes="(min-width: 720px) 720px"></figure>
+![Events in spans showing in Grafana](/content/images/2024/07/workflow-2-events.png)
 
 And finally when all the Entity processing has completed, we can end the Activity. The API can respond with a lengthy set of errors if there's been a failure but we don't need to record all that - just flagging the Activity with a status code of OK or Error will flow through into Tempo:
 
-    Activity.SetEndTime(updated.GetEndTime());
-    if (string.IsNullOrEmpty(errorMessage))
-    {
-      Activity.SetStatus(ActivityStatusCode.Ok);
-    }
-    else
-    {
-      Activity.SetStatus(ActivityStatusCode.Error, errorMessage);
-    }
-    Activity.Stop();
+
+```csharp
+Activity.SetEndTime(updated.GetEndTime());
+if (string.IsNullOrEmpty(errorMessage))
+{
+  Activity.SetStatus(ActivityStatusCode.Ok);
+}
+else
+{
+  Activity.SetStatus(ActivityStatusCode.Error, errorMessage);
+}
+Activity.Stop();
+```
 
 Tags and attributes can all be used for filtering in Grafana, so you can search for failures or build a dashboard with a table for errored workflows. In the detail you see the status and the error message:
 
-<figure class="kg-card kg-image-card"><img src=" __GHOST_URL__ /content/images/2024/07/image-4.png" class="kg-image" alt loading="lazy" width="1932" height="884" srcset=" __GHOST_URL__ /content/images/size/w600/2024/07/image-4.png 600w, __GHOST_URL__ /content/images/size/w1000/2024/07/image-4.png 1000w, __GHOST_URL__ /content/images/size/w1600/2024/07/image-4.png 1600w, __GHOST_URL__ /content/images/2024/07/image-4.png 1932w" sizes="(min-width: 720px) 720px"></figure>
+![Errored worfklows show the status and error message](/content/images/2024/07/workflow-2-error.png)
+
 ## On to Production
 
 As always it's great to be able to run this whole thing in Docker on a developer's laptop, to prove out the process and make code changes quickly. The real system runs in Kubernetes on Azure, and next time I'll walk through deploying the monitoring subsystem and the demo app using Helm.
