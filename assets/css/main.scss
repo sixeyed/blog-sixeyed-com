@@ -53,3 +53,13 @@ $right-sidebar-width-wide: 300px !default;
     flex-grow: 1;
     justify-content: center;
 }
+
+.author__avatar {
+    display: flex;
+}
+
+.author__urls-wrapper {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}

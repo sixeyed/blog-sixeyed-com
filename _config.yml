@@ -73,31 +73,40 @@ author:
   name   : "Elton Stoneman"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Freelance consultant and trainer. 15x Microsoft MVP. Manning Author. Pluralsight Author. "
+  uri: https://pluralsight.pxf.io/YMBGB
+  github: sixeyed
+  twitter: EltonStoneman
   links:
     - label: "Pluralsight"
-      icon: "fas fa-fw fa-link"
+      icon: "a-fw fa-regular fa-circle-play"
       url: "https://pluralsight.pxf.io/YMBGB"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/EltonStoneman"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/sixeyed"
 
 footer:
   links:
+    - label: "Pluralsight"
+      icon: "fa-fw fa-regular fa-circle-play"
+      url: "https://pluralsight.pxf.io/YMBGB"
+    - label: "Udemy"
+      icon: "fa-fw fa-regular fa-circle-play"
+      url: "https://docker4.net/udemy"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/EltonStoneman"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/eltonstoneman/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/sixeyed"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@EltonStoneman"
 
 defaults:
   # _posts
