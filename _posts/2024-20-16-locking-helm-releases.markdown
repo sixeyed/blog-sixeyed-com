@@ -22,9 +22,11 @@ Helm has the `upgrade --install` command which supports this idempotent approach
 
 ## Pending Status to the Rescue
 
-When Helm installs and upgrades get interrupted they can leave the release in a pending state - `pending-upgrade` or `pending-rollback`, usually when an operation times out. It's a nasty situation which requires manually deleting the Helm release secret (until this [HIP](https://github.com/helm/community/pull/354) is completed) - but it effectively prevents any further changes to the release, so we can abuse it to create a lock.
+When Helm installs and upgrades get interrupted they can leave the release in a pending state - `pending-upgrade` or `pending-rollback`, usually when an operation times out. It's a nasty situation which requires manually deleting the Helm release Secret (until this [HIP](https://github.com/helm/community/pull/354) is completed) - but it effectively prevents any further changes to the release, so we can abuse it to create a lock.
 
-The scripting for this is fairly simple, but it does rely on the internals of how Helm represents a release, so it's liable to be broken at some point (it's working as of Helm 3.16). Every time you install or upgrade a release Helm creates a Kubernetes Secret which contains an encoded representation of the release. You can try this with a simple Helm chart from my book [Learn Kubernetes in a Month of Lunches](https://amzn.to/3x3O7mt):
+The scripting for this is fairly simple, but it does rely on the internals of how Helm represents a release, so it's liable to be broken at some point (it's working as of Helm 3.16). Every time you install or upgrade a release Helm creates a Kubernetes Secret which contains an encoded representation of the release. 
+
+You can try this with a simple Helm chart from my book [Learn Kubernetes in a Month of Lunches](https://amzn.to/3x3O7mt):
 
 ```
 helm repo add kiamol https://kiamol.net
@@ -82,11 +84,12 @@ Now we can see how to trick Helm into blocking any updates. The process is:
 - also increment the `version` field and set a useful description
 - zip and encode the updated `release` JSON
 - get the Secret and store as a YAML file
-- update the `release` field in the YAML with the new date
+- update the `release` field in the YAML with the new data
 - update the YAML metadata
 - apply the updated Secret YAML
 
 I use [yq](https://mikefarah.gitbook.io/yq) to make the JSON and YAML updates. 
+{: .notice--info}
 
 In Bash it looks like this - setting some variables first for the release we want to lock (fetch them from `helm ls`):
 
