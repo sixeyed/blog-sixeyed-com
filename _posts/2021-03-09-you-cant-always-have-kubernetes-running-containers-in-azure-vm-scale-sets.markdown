@@ -12,7 +12,7 @@ header:
 
 Rule number 1 for running containers in production: don't run them on individual Docker servers. You want reliability, scale and automated upgrades and for that you need an orchestrator like Kubernetes, or a managed container platform like [Azure Container Instances](https://azure.microsoft.com/en-gb/services/container-instances/#overview).
 
-> If you're choosing between container platforms, my new Pluralsight course [Deploying Containerized Applications](https://pluralsight.pxf.io/dooo1Q) walks you through the major options.
+> If you're choosing between container platforms, my new Pluralsight course [Deploying Containerized Applications](https://www.pluralsight.com/courses/deploying-containerized-applications) walks you through the major options.
 
 But the thing about production is: you've got to get your system running, and real systems have technical constraints. Those constraints might mean you have to forget the rules. This post covers a client project I worked on where my design had to forsake rule number 1, and build a scalable and reliable system based on containers running on VMs.
 

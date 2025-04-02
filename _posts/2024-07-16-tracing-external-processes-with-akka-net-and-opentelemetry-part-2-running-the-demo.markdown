@@ -54,7 +54,7 @@ What we have here is the real stack for monitoring, and a dummy stack for genera
 - [the Workflow Generator](https://github.com/sixeyed/tracing-external-workflows/blob/main/src/tools/Tracing.WorkflowGenerator/WorkflowMessagePublisher.cs) is a simple tool which simulates batch processing by publishing a bunch of WorkflowStarted events to Redis, which kicks off all the monitoring in the back end;
 - [Tempo](https://grafana.com/oss/tempo/) is a collector for distributed traces, with a simple storage model. It replaces Jaeger or Zipkin and can ingest the standard OpenTelemetry protocols. 
 
-I use Jaeger in my 5\* [Pluralsight course - Getting Started with Istio](https://pluralsight.pxf.io/4PXQn0) but Tempo is nice alternative and integrates very well with Grafana.
+I use Jaeger in my 5\* [Pluralsight course - Getting Started with Istio](https://www.pluralsight.com/courses/kubernetes-istio-managing-apps) but Tempo is nice alternative and integrates very well with Grafana.
 {: .notice--info}
 
 - [Grafana](https://grafana.com/oss/grafana/) is configured to read trace data from Tempo. In the real system the worker collects additional metrics which we store in Prometheus, and this stack gives us a single UI for dashboards and trace visualization.
