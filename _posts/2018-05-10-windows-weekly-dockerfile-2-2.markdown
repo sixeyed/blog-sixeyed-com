@@ -48,7 +48,7 @@ That `db.SaveChanges()` call from Entity Framework looks straightforward enough,
 
 Worse, the database context object `db` is an instance variable in the [DinnersController class](https://github.com/sixeyed/docker-on-windows/blob/master/ch03/ch03-nerd-dinner-web/src/NerdDinner/Controllers/DinnersController.cs) - there's no `using` statement wrapping the data access. That means you're not explicitly controlling the scope of the database context, so you'll be hogging a connection from the SQL Server connection pool for the duration of the HTTP call.
 
-> It's like the original Nerd Dinner devs didn't watch [my Pluralsight course on IDisposable best practices](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fidisposable-best-practices-csharp-developers) :)
+> It's like the original Nerd Dinner devs didn't watch [my Pluralsight course on IDisposable best practices](/l/ps-home) :)
 
 SQL Server has a finite number of connections which can be open simultaneously - the default connection pool size is 100. That's why synchronous database access doesn't scale. Under high load, you can starve the connection pool and the next user who tries to save data will get a nasty error saying the app can't access the database.
 

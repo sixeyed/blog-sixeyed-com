@@ -16,7 +16,7 @@ I can't imagine Shawn has much free time, so I'm very grateful for him agreeing 
 
 * * *
 
-Docker and ASP.NET Core RC2. I’m preparing for the update of [my course](https://www.pluralsight.com/courses/aspdotnet-5-ef7-bootstrap-angular-web-app), and learning how to host it in Docker at the same time. Docker is an important tech and every developer should understand it (not necessarily know how to do everything in it).
+Docker and ASP.NET Core RC2. I’m preparing for the update of [my course](/l/ps-home), and learning how to host it in Docker at the same time. Docker is an important tech and every developer should understand it (not necessarily know how to do everything in it).
 
 ### 2. On .NET Core, developing in the open is a huge step for Microsoft and it's not all good news. At the moment there's a lot of unease as the DNX framework - which was mature but unlikeable, is being replaced with the dotnet CLI - which is much nicer, but not yet fully featured. Are you advising .NET people to get stuck in now, or wait for everything to settle?
 
@@ -48,6 +48,6 @@ Left-pad was a minimal library and lots of people used it because others used it
 
 We have an off-brand six string acoustic that we take. It was about $200 so that if it gets broken or lost, then we don’t feel too bad. My main guitar is a 1985 [Taylor 810](https://www.taylorguitars.com/guitars/acoustic/810) that is the first thing that I take out of the house in case of a fire. I’d never take it on the road, but it’s what I use to play when I’m home and when I record.
 
-> Thank you Shawn! The series will be back next week, until then there are plenty of [Shawn's Pluralsight courses](https://www.pluralsight.com/authors/shawn-wildermuth).
+> Thank you Shawn! The series will be back next week, until then there are plenty of [Shawn's Pluralsight courses](/l/shawn-wildermuth).
 
 <!--kg-card-end: markdown-->

@@ -95,7 +95,7 @@ Now that the image is set up, you can use `docker-compose stop` and `start` to t
 
 ## Using GitLab on the USB stick
 
-For any repos which you're hosting on GitLab, you'll need to add them as a remote in your local repo. If you use the config above, GitLab will be setup for SSH on 127.0.0.1:522. As an example, this adds a remote called **usb** for one of my [Pluralsight](https://www.pluralsight.com/authors/elton-stoneman) projects:
+For any repos which you're hosting on GitLab, you'll need to add them as a remote in your local repo. If you use the config above, GitLab will be setup for SSH on 127.0.0.1:522. As an example, this adds a remote called **usb** for one of my [Pluralsight](/l/ps-home) projects:
 
     git remote add usb ssh://git@127.0.0.1:522/psod-iaas/psod-iaas_audio.git
 

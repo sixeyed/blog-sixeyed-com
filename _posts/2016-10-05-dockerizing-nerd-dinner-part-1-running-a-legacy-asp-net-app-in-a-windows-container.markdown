@@ -8,7 +8,7 @@ tags:
 - windows
 ---
 
-> <mark>Update!</mark> The Nerd Dinner project has moved to my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/). And I have a Pluralsight course on [Modernizing .NET Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker).
+> <mark>Update!</mark> The Nerd Dinner project has moved to my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/). And I have a Pluralsight course on [Modernizing .NET Apps with Docker](/l/ps-home).
 
 `FROM microsoft/iis` - a single line of code which has the potential to change the way you build, ship, run, test, support and even design ASP.NET applications.
 

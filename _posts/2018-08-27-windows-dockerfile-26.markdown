@@ -25,7 +25,7 @@ The [Docker Compose syntax](https://docs.docker.com/compose/compose-file/) is ve
 
 You can use Docker Compose on a single-node Docker environment and in a cluster. So the same application definition gets used by developers with Docker Desktop right through to production with Docker Enterprise.
 
-> You can learn all about using Docker Compose in production with Linux and Windows containers in my Pluralsight course [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmanaging-load-balancing-scale-docker-swarm-clusters).
+> You can learn all about using Docker Compose in production with Linux and Windows containers in my Pluralsight course [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](/l/ps-home).
 
 # Defining Distributed Applications with Docker Compose
 

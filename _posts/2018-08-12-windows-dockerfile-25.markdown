@@ -25,7 +25,7 @@ And of course .NET Core apps are cross-platform, so you can run them on minimal 
 
 [This week's Dockerfile](https://github.com/sixeyed/docker-on-windows/blob/master/ch05/ch05-nerd-dinner-web/Dockerfile) packages a .NET Core app which saves data in [Elasticsearch](https://www.elastic.co/products/elasticsearch). It's a console app which listens on a message queue. The app, the queue and Elasticsearch all run in Windows containers, alongside all the existing parts of the new Nerd Dinner stack.
 
-> I go through this approach in more detail in my Pluralsight course [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker).
+> I go through this approach in more detail in my Pluralsight course [Modernizing .NET Framework Apps with Docker](/l/ps-home).
 
 Way back in [Windows Dockerfile #21](/windows-weekly-dockerfile-21-nerd-dinner/) I put together a new version of the Nerd Dinner web app which publishes events to a [NATS](https://nats.io) message queue when a user creates a new dinner.
 

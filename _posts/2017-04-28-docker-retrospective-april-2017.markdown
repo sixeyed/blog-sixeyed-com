@@ -95,7 +95,7 @@ The next NDC is in [Oslo in June](http://ndcoslo.com/) and I'll be there - prese
 
 ## Getting Started with Docker Datacenter
 
-My [Pluralsight](https://www.pluralsight.com/authors/elton-stoneman) course - [Getting Started with Docker Datacenter](https://www.pluralsight.com/courses/getting-started-docker-datacenter) - was the free course over the week of DockerCon, and it got some great feedback - thanks everyone who reviewed it!
+My [Pluralsight](/l/ps-home) course - [Getting Started with Docker Datacenter](/l/ps-home) - was the free course over the week of DockerCon, and it got some great feedback - thanks everyone who reviewed it!
 
 ![Getting Started with Docker Datacenter](/content/images/2017/08/Getting_Started_with_Docker_Datacenter___Pluralsight.jpg)
 

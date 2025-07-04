@@ -8,7 +8,7 @@ tags:
 
 For this week's Six Questions interview, I'm happy to be joined by Pluralsight author [Tim Warner](http://timwarnertech.com/).
 
-Tim is an IT pro who has written and edited a host of books covering topics as diverse as PowerShell, Minecraft and the Rapberry Pi. And if you watch all of Tim's courses you'll be well placed to get your [CompTIA A+](https://www.pluralsight.com/courses/security-comptia-a-plus-220-902) and [Azure](https://www.pluralsight.com/courses/preparing-pass-microsoft-azure-70-533-exam) certifications.
+Tim is an IT pro who has written and edited a host of books covering topics as diverse as PowerShell, Minecraft and the Rapberry Pi. And if you watch all of Tim's courses you'll be well placed to get your [CompTIA A+](/l/ps-home) and [Azure](/l/ps-home) certifications.
 
 Tim regularly speaks at the big conferences and at local user groups, and you'll often find him blogging at [4sysops](https://4sysops.com/archives/).
 

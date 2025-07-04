@@ -7,9 +7,9 @@ tags:
 - net
 ---
 
-My latest [Pluralsight](https://www.pluralsight.com/authors/elton-stoneman) course is out now:
+My latest [Pluralsight](/l/ps-home) course is out now:
 
-> [Hadoop for .NET Developers](https://www.pluralsight.com/courses/hadoop-for-dotnet-developers)
+> [Hadoop for .NET Developers](/l/ps-home)
 
 It takes you through running Hadoop on Windows and using .NET to write MapReduce queries - proving that you can do Big Data on the Microsoft stack.
 
@@ -19,7 +19,7 @@ The course has five modules, starting with the architecture of Hadoop and workin
 
 [Hadoop](http://hadoop.apache.org/) is the core technology in Big Data problems - it provides scalable, reliable storage for huge quantities of data, and scalable, reliable compute for querying that data. To start the course I cover [HDFS](http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html) and [YARN](http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/index.html) - how they work and how they work together. I use a 600MB public dataset (from the [2011 UK census](https://data.gov.uk/dataset/national-statistics-postcode-lookup-uk)), upload it to HDFS and demonstrate a simple Java MapReduce query.
 
-> Unlike my other Pluralsight course, [Real World Big Data in Azure](https://www.pluralsight.com/courses/real-world-big-data-microsoft-azure), there are **word counts** in this course - to focus on the technology, I keep the queries simple for this one.
+> Unlike my other Pluralsight course, [Real World Big Data in Azure](/l/ps-azure-big-data), there are **word counts** in this course - to focus on the technology, I keep the queries simple for this one.
 
 ## 2. Running Hadoop on Windows
 
@@ -57,8 +57,8 @@ Hadoop is a foundational technology, and querying with MapReduce gives you a lot
 - [HBase](http://hbase.apache.org/) - a real-time Big Data NoSQL database which uses Hadoop for storage;
 - [Spark](http://spark.incubator.apache.org/) - a compute engine which uses Hadoop, but caches data in-memory to provide fast data access.
 
-> If the larger ecosystem interests you, I go into more depth with a couple of **free** eBooks: [Hive Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/Hive-Succinctly) and [HBase Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/hbase), and I also cover them in detail on Azure in my Pluralsight course [HDInsight Deep Dive: Storm, HBase and Hive](https://www.pluralsight.com/courses/hdinsight-deep-dive-storm-hbase-hive).
+> If the larger ecosystem interests you, I go into more depth with a couple of **free** eBooks: [Hive Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/Hive-Succinctly) and [HBase Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/hbase), and I also cover them in detail on Azure in my Pluralsight course [HDInsight Deep Dive: Storm, HBase and Hive](/l/ps-hdinsight).
 
-The goal of [Hadoop for .NET Developers](https://www.pluralsight.com/courses/hadoop-for-dotnet-developers) is to give you a thorough grounding in Hadoop, so you can run your own PoC using the approach in the course, to evaluate Hadoop with .NET for your own datasets.
+The goal of [Hadoop for .NET Developers](/l/ps-home) is to give you a thorough grounding in Hadoop, so you can run your own PoC using the approach in the course, to evaluate Hadoop with .NET for your own datasets.
 
 <!--kg-card-end: markdown-->

@@ -67,7 +67,7 @@ The files themselves contain events of different types from different sources, l
 
 Certain fields are present in every event, like the timestamp, event name and source device ID - but for different events, the rest of the fields are all variable.
 
-> This is a good starting point for structuring the deep storage part of your Big Data solution - I cover it in more depth in Module 3 of my Pluralsight course [Real World Big Data in Azure](https://www.pluralsight.com/courses/real-world-big-data-microsoft-azure), 'Storing Event Data for Batch Queries'
+> This is a good starting point for structuring the deep storage part of your Big Data solution - I cover it in more depth in Module 3 of my Pluralsight course [Real World Big Data in Azure](/l/ps-azure-big-data), 'Storing Event Data for Batch Queries'
 
 The container is in the Storage Account which I used as the data source for my Spark cluster, but it's not in the root container that the cluster uses. I can access all the files in the Account, but I need to use a fully-qualified WASB address, like this:
 

@@ -6,12 +6,12 @@ tags:
 - pluralsight
 ---
 
-I've been authoring training courses with [Pluralsight](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fauthors%2Felton-stoneman) since 2013, covering a range of topics - mainly Docker, .NET and Azure, but with some architecture, AWS and Linux content too.
+I've been authoring training courses with [Pluralsight](/l/ps-home) since 2013, covering a range of topics - mainly Docker, .NET and Azure, but with some architecture, AWS and Linux content too.
 
 This page has an up-to-date list of all my courses, with their current user rating and an excerpt.
 
 * * *
-####[Monitoring Containerized Application Health with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmonitoring-containerized-app-health-docker) &nbsp; 
+####[Monitoring Containerized Application Health with Docker](/l/ps-home) &nbsp; 
 
 > Containers are the best way to run new and old server applications, but before you go to production you need to understand a new approach to monitoring - one that works when you have dozens or hundreds of short-lived containers.
 
@@ -26,7 +26,7 @@ This page has an up-to-date list of all my courses, with their current user rati
 Released: 09 August 2018
 
 * * *
-####[Managing Load Balancing and Scale in Docker Swarm Mode Clusters](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmanaging-load-balancing-scale-docker-swarm-clusters) &nbsp; 
+####[Managing Load Balancing and Scale in Docker Swarm Mode Clusters](/l/ps-home) &nbsp; 
 
 > Docker swarm mode is a production-grade container orchestrator with built-in features for load-balancing and scaling your applications. In this course you'll learn how to deploy and manage applications in swarm mode for high availability, high performance, and easy scale.
 
@@ -37,7 +37,7 @@ Released: 09 August 2018
 Released: 23 March 2018
 
 * * *
-####[Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker) &nbsp; 
+####[Modernizing .NET Framework Apps with Docker](/l/ps-home) &nbsp; 
 
 > Docker isn't just for greenfield microservices applications, you can take full .NET Framework applications and run them in containers with no code changes. That's a great starting point for modernizing the architecture and moving to the cloud.
 
@@ -48,7 +48,7 @@ Released: 23 March 2018
 Released: 28 December 2017
 
 * * *
-####[Getting Started with Docker Datacenter](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-docker-datacenter) &nbsp; 
+####[Getting Started with Docker Datacenter](/l/ps-docker-datacenter) &nbsp; 
 
 > Developers love [Docker](https://www.docker.com/) for its simple approach to packaging, distributing, and running applications. The open source Docker ecosystem provides a lot of tools, but before you put container workloads in production you'll want enterprise-grade security, management, and support. [Docker Datacenter](https://www.docker.com/products/docker-datacenter) provides that for multi-node installations of Docker on-premises and in virtual private clouds.
 
@@ -59,7 +59,7 @@ Released: 28 December 2017
 Released: 6 January 2017
 
 * * *
-####[Hadoop for .NET Developers](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fhadoop-for-dotnet-developers) &nbsp; 
+####[Hadoop for .NET Developers](/l/ps-home) &nbsp; 
 
 > Big Data is an established discipline, and every company can benefit from storing and analyzing large amounts of data to improve their products and services. [Hadoop](http://hadoop.apache.org/) is the key technology in Big Data, but it's too often seen as something which is only for Java and Linux people. This course will teach you how to use this key technology.
 
@@ -68,7 +68,7 @@ Released: 6 January 2017
 Released: 29 August 2016
 
 * * *
-####[Managing Azure IaaS with PowerShell](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmanaging-azure-iaas-with-powershell) &nbsp; 
+####[Managing Azure IaaS with PowerShell](/l/ps-home) &nbsp; 
 
 > Hosting your [infrastructure on Azure](https://azure.microsoft.com/en-gb/services/virtual-machines/) is a powerful option, but with great power comes a lot of management overhead. In this course you'll learn how to automate IaaS setup, configuration and management on Azure with PowerShell. We look at moving an existing deployment composed of Linux and Windows app servers to the cloud.
 
@@ -78,7 +78,7 @@ Released: 10 April 2015
 
 * * *
 
-#### [HDInsight Deep Dive: Storm, HBase, and Hive](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fhdinsight-deep-dive-storm-hbase-hive) &nbsp; 
+#### [HDInsight Deep Dive: Storm, HBase, and Hive](/l/ps-home) &nbsp; 
 
 > [HDInsight](https://azure.microsoft.com/en-gb/services/hdinsight/) is Microsoft's managed Big Data stack in the cloud. With Azure you can provision clusters running [Storm](http://storm.apache.org/), [HBase](https://hbase.apache.org/), and [Hive](https://hive.apache.org/) which can process thousands of events per second, store petabytes of data, and give you a SQL-like interface to query it all. In this course, we'll build out a full solution using the stack and take a deep dive into each of the technologies.
 
@@ -86,7 +86,7 @@ Released: 6 November 2015
 
 * * *
 
-#### [Real World Big Data in Azure](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Freal-world-big-data-microsoft-azure) &nbsp; 
+#### [Real World Big Data in Azure](/l/ps-home) &nbsp; 
 
 > The [Big Data components of Azure](http://azure.microsoft.com/en-gb/services/hdinsight/) let you build solutions which can process billions of events, using technologies you already know. In this course, we build a real world Big Data solution in two phases, starting with just .NET technologies and then adding [Hadoop tools](http://www.revelytix.com/?q=content/hadoop-ecosystem).
 
@@ -94,7 +94,7 @@ Released: 16 June 2015
 
 * * *
 
-#### [Getting Started with Ubuntu](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fubuntu-getting-started) &nbsp; 
+#### [Getting Started with Ubuntu](/l/ps-home) &nbsp; 
 
 > [Ubuntu](http://www.ubuntu.com/) is a free operating system which you can run on your PC or laptop instead of Windows or OSX. It's fast, safe, easy to use, hugely powerful, and fun. This course starts with the basics: installing Ubuntu, finding your way around, and using more free software to work and play. Then we move on to more advanced topics like using the command line, building software, and using [Ubuntu Server](http://www.ubuntu.com/server) locally and in the Cloud.
 
@@ -102,7 +102,7 @@ Released: 26 February 2015
 
 * * *
 
-#### [Five Essential Tools for Building REST APIs](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ffive-essential-tools-building-rest-api) &nbsp; 
+#### [Five Essential Tools for Building REST APIs](/l/ps-home) &nbsp; 
 
 > [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) APIs are a great way to connect systems together. They are platform-independent and work on simple, well-established standards that are designed to support high performance, massive scale, and secure communication. This course presents a [toolset](http://www.essentialresttools.net/) for delivering better REST APIs that give clients what they need, run fast, scale well, and are easy to look after.
 
@@ -110,7 +110,7 @@ Released: 01 December 2014
 
 * * *
 
-#### [Executable Specifications: End-to-End Acceptance Testing With SpecFlow](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fexecutable-specifications-specflow)&nbsp; 
+#### [Executable Specifications: End-to-End Acceptance Testing With SpecFlow](/l/ps-home)&nbsp; 
 
 > [Acceptance tests](http://guide.agilealliance.org/guide/acceptance.html) prove your solution actually works, and using them to implement executable specifications proves your solution does what it should do. In this course we look at capturing requirements as executable specifications and implementing them as end-to-end tests with [SpecFlow](http://www.specflow.org/).
 
@@ -118,7 +118,7 @@ Released: 27 August 2014
 
 * * *
 
-#### [IDisposable Best Practices for C# Developers](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fidisposable-best-practices-csharp-developers)&nbsp; 
+#### [IDisposable Best Practices for C# Developers](/l/ps-home)&nbsp; 
 
 > [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable%28v=vs.110%29.aspx) is at the heart of .NET. This course will teach you all about implementing and using IDisposable in C#, and show you what goes wrong if you don't use IDisposable, so you know why you need to use it in your solutions.
 
@@ -126,7 +126,7 @@ Released: 30 June 2014
 
 * * *
 
-#### [Message Queue Fundamentals in .NET](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmessage-queue-fundamentals-dotnet)&nbsp; 
+#### [Message Queue Fundamentals in .NET](/l/ps-home)&nbsp; 
 
 > Message queues are a core technology for building fast, reliable systems. This course teaches the fundamental messaging patterns with practical .NET implementations using [MSMQ](https://msdn.microsoft.com/en-us/library/ms711472%28v=vs.85%29.aspx), [ZeroMQ](http://zeromq.org/), [cloud](http://azure.microsoft.com/en-gb/services/service-bus/) [message queues](https://aws.amazon.com/sqs/), and [WebSphere MQ](http://www-03.ibm.com/software/products/en/ibm-mq).
 
@@ -134,7 +134,7 @@ Released: 28 April 2014
 
 * * *
 
-#### [C# Extension Methods](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fcsharp-extension-methods)&nbsp; 
+#### [C# Extension Methods](/l/ps-home)&nbsp; 
 
 > [Extension methods](https://msdn.microsoft.com/en-GB/library/bb383977.aspx) are a powerful C# feature which are underused and often misunderstood. In this course you’ll learn all you need to know about writing and using extension methods.
 
@@ -142,7 +142,7 @@ Released: 16 December 2013
 
 * * *
 
-#### [Implementing the Reactive Manifesto with Azure and AWS](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fimplementing-reactive-manifesto-azure-aws)&nbsp; 
+#### [Implementing the Reactive Manifesto with Azure and AWS](/l/ps-home)&nbsp; 
 
 > [The Reactive Manifesto](http://www.reactivemanifesto.org/) describes applications which are responsive, event-driven, scalable and resilient. This course shows you how to design, build, deploy and run Reactive applications in the cloud.
 
@@ -150,7 +150,7 @@ Released: 30 October 2013
 
 * * *
 
-#### [Nginx and PHP Fundamentals](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fnginx-php-fundamentals)&nbsp; 
+#### [Nginx and PHP Fundamentals](/l/ps-home)&nbsp; 
 
 > [Nginx](http://nginx.org/) and [PHP](http://www.php.net/) are two of the biggest platforms on the Web. Get up and running with these lightweight, easy to learn technologies that provide high-performance solutions with low operating costs.
 
@@ -158,7 +158,7 @@ Released: 31 July 2013
 
 * * *
 
-#### [Caching in the .NET Stack: Inside-Out](//pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdotnet-caching-inside-out)&nbsp;
+#### [Caching in the .NET Stack: Inside-Out](/l/ps-dotnet-caching)&nbsp;
 
 > A comprehensive look at caching throughout the .NET stack, covering WCF, Web API, Web Forms and MVC. You'll learn how and where to add caching, and you'll see the huge performance benefits you can expect.
 

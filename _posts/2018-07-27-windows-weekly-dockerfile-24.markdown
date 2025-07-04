@@ -13,7 +13,7 @@ This is **#24** in the [Windows Dockerfile series](/tag/weekly-dockerfile/), whe
 
 # Docker Build Patterns for Distributed Apps
 
-[Microservices](https://www.nginx.com/resources/library/microservices-reference-architecture/). [Twelve-factor apps](https://12factor.net). [The Reactive Manifesto](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fimplementing-reactive-manifesto-azure-aws). Even SOA. All variations of an architectural style where one logical application is deployed as many small components. Every component can run at its own scale and have its own deployment schedule - and [since the advent of Docker](https://github.com/sixeyed/docker-on-windows/blob/master/preface.md) - they can all run in small, fast, secure containers.
+[Microservices](https://www.nginx.com/resources/library/microservices-reference-architecture/). [Twelve-factor apps](https://12factor.net). [The Reactive Manifesto](/l/ps-home). Even SOA. All variations of an architectural style where one logical application is deployed as many small components. Every component can run at its own scale and have its own deployment schedule - and [since the advent of Docker](https://github.com/sixeyed/docker-on-windows/blob/master/preface.md) - they can all run in small, fast, secure containers.
 
 The codebase for a distributed solution running in Docker has all the Dockerfiles and the Docker Compose files living in SCM alongside the source code:
 
@@ -31,7 +31,7 @@ Your whole stack is in source so a new joiner just clones the repo and runs some
 
 Typically that's a _build-everything-independently_ pattern. Each Dockerfile uses a multi-stage build, where the first stage compiles the app from source and the final stage packages the published app into the Docker image.
 
-> Check out my [Pluralsight course on modernizing .NET Framework apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker) to see this pattern in action.
+> Check out my [Pluralsight course on modernizing .NET Framework apps with Docker](/l/ps-home) to see this pattern in action.
 
 That's great because if you're only working on one component - and [if you've created effective images](https://dockercon2018.hubs.vidyard.com/watch/YppHjLzVXAoF2PaRg3oQRs) - you get superfast in-container builds which are using the exact same toolset as the CI builds.
 

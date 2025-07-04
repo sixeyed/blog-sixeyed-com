@@ -12,7 +12,7 @@ header:
 
 Distributed tracing is one of the most useful observability tools you can add to your products. Digging into the steps of some process to see what happened and how long everything took gives you a valuable debugging tool for distributed systems. It's usually straightforward to add tracing to HTTP components - you can get a lot of the work for free if you use a service mesh like Istio - but I had an interesting problem where I wanted to monitor processes running in an external system.
 
-I cover the easy(ish) way to do this with HTTP services, and look at the benefits of observability in my 5\* Pluralsight course [Managing Apps on Kubernetes with Istio](https://pluralsight.pxf.io/4PXQn0).
+I cover the easy(ish) way to do this with HTTP services, and look at the benefits of observability in my 5\* Pluralsight course [Managing Apps on Kubernetes with Istio](/l/ps-istio).
 {: .notice--info}
 
 The system is a risk calculation engine. It has a REST API where you submit work and check on progress, but it doesn't expose much useful instrumentation. When we submit a piece of work it goes through several stages, which range in duration from 5 minutes to several hours. In that time we can poll the API for a progress report, but we just get a snapshot of the current status, we don't get an overall picture of the workflow.

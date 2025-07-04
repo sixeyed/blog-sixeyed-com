@@ -55,7 +55,7 @@ Expect that to change quickly - there's a lot of content coming out from [Micros
 
 You can't run Linux container images on Windows, but you can mix Windows and Linux hosts in a single Docker Swarm, letting you run a combination of Windows and Linux containers. That could be a very attractive option if you're looking at breaking up an ASP.NET monolith and/or you want to run in the cloud - your new microservices can be .NET Core apps running in containers on cheap Linux hosts, with the rest of the app running in Windows containers in the same cluster.
 
-> If you're new to Linux, check out my Pluralsight course [Getting Started with Ubuntu](https://www.pluralsight.com/courses/ubuntu-getting-started). There's even a section on Docker.
+> If you're new to Linux, check out my Pluralsight course [Getting Started with Ubuntu](/l/ps-ubuntu). There's even a section on Docker.
 
 ## And then?
 

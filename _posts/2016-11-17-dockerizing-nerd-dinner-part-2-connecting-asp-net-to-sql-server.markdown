@@ -8,7 +8,7 @@ tags:
 - sql-server
 ---
 
-> <mark>Update!</mark> The Nerd Dinner project has moved to my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/). And I have a Pluralsight course on [Modernizing .NET Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker).
+> <mark>Update!</mark> The Nerd Dinner project has moved to my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/). And I have a Pluralsight course on [Modernizing .NET Apps with Docker](/l/ps-home).
 
 We finished [Part 1](https://blog.sixeyed.com/dockerizing-nerd-dinner-part-1-running-a-legacy-asp-net-app-in-a-windows-container/) with a working version of NerdDinner running in Docker. Moving legacy .NET apps to Docker can be the first step to modernizing them - as containers they can be managed consistently, and the platform lets you easily break down large applications.
 

@@ -12,7 +12,7 @@ I've recently finished work on an eBook, and I based all the code samples on a D
 
 ### The problem
 
-With any technical training (books, on-site learning or video training like [my Pluralsight courses](https://www.pluralsight.com/authors/elton-stoneman)), a good deal of the benefit comes from trying out the technology as you're learning about it. Much of my content is about server technologies, and getting students to a point where they can even start following along with my code can be painful. You need:
+With any technical training (books, on-site learning or video training like [my Pluralsight courses](/l/ps-home)), a good deal of the benefit comes from trying out the technology as you're learning about it. Much of my content is about server technologies, and getting students to a point where they can even start following along with my code can be painful. You need:
 
 - explicitly stated pre-requisites, like OS versions, hardware requirements, software dependencies
 - a step-by-step setup guide which stands alone as an easy to follow instruction list

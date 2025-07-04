@@ -9,7 +9,7 @@ tags:
 
 Want to write MapReduce jobs for Big Data in C# and execute them on a Hadoop cluster running Linux? Now that .NET Core 1.0 is RTM, we can do it. And thanks to the .NET community a huge number of NuGet packages already have .NET Core support, so there's a good set of libraries for transformation already available.
 
-I'm covering this in my upcoming [Pluralsight](https://www.pluralsight.com/authors/elton-stoneman) course, **Hadoop for .NET Developers** , and in this post I'll show you how to run .NET MapReduce jobs without having to install Hadoop, by using my Docker image.
+I'm covering this in my upcoming [Pluralsight](/l/ps-home) course, **Hadoop for .NET Developers** , and in this post I'll show you how to run .NET MapReduce jobs without having to install Hadoop, by using my Docker image.
 
 > Short version: [sixeyed/hadoop-dotnet image on the Docker Hub](https://hub.docker.com/r/sixeyed/hadoop-dotnet/)
 
@@ -59,7 +59,7 @@ Here's a simple example of the main method in a `Program.cs`, which picks the th
         }
     }
 
-> Those `using` statements are important as your .NET Core app will run for a whole Hadoop file block, and you should use your resources carefully. But you should always follow [IDisposable best practices](https://www.pluralsight.com/courses/idisposable-best-practices-csharp-developers) anyway.
+> Those `using` statements are important as your .NET Core app will run for a whole Hadoop file block, and you should use your resources carefully. But you should always follow [IDisposable best practices](/l/ps-home) anyway.
 
 The `CsvParser` class comes from the [CsvHelper package on NuGet](https://www.nuget.org/packages/CsvHelper), which has been ported to .NET Core. [JSON.NET](https://www.nuget.org/packages/Newtonsoft.Json/) has been ported too, and you'll find most popular libraries are already available to you.
 

@@ -37,7 +37,7 @@ The UI has a split pane with a markdown editor on the left and an approximate re
 
 Ghost is a Node app which actually does two things - it hosts the public blog website for readers, and it hosts the private editor view for writers.
 
-But I never edit my blog directly online, and I don't want to give anyone the option of compromising it. <mark>Imagine if someone hacked my blog and removed all the upsell for my book <a href="https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/">Docker on Windows</a> or my Pluralsight course on <a href="https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker">modernizing .NET apps with Docker</a> :)</mark>
+But I never edit my blog directly online, and I don't want to give anyone the option of compromising it. <mark>Imagine if someone hacked my blog and removed all the upsell for my book <a href="https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/">Docker on Windows</a> or my Pluralsight course on <a href="/l/ps-home .NET apps with Docker</a> :)</mark>
 
 So I run Ghost in Docker, and in production the Ghost containers are not publicly available - they're behind Nginx containers which I use as a reverse proxy:
 

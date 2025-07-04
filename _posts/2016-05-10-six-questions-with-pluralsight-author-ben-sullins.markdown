@@ -7,7 +7,7 @@ This week's Six Questions is with Pluralsight author [Ben Sullins](https://www.p
 
 Ben is a self-confessed data geek, and an expert in driving business intelligence from Big Data. On [his blog](http://bensullins.com/), Ben has a great ['Makeover Monday'](http://bensullins.com/category/makeover-monday/) feature where he takes a public infographic and redesigns it to show more information more quickly.
 
-Ben's worked with some of the industry's biggest data producers to help them gain insight and business value, and his Pluralsight courses cover popular technologies like [Tableau](https://www.pluralsight.com/courses/big-data-analytics-tableau) and [D3](https://www.pluralsight.com/courses/d3js-data-visualization-fundamentals), as well as broader topics like dashboard design.
+Ben's worked with some of the industry's biggest data producers to help them gain insight and business value, and his Pluralsight courses cover popular technologies like [Tableau](/l/ps-home) and [D3](/l/ps-home), as well as broader topics like dashboard design.
 
 ### 1. What are you learning at the moment?
 

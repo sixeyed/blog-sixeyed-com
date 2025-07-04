@@ -25,7 +25,7 @@ With git you have your own local repository. You can make changes, commit them p
 
 git is cross-platform, fast and easy, and it makes merging a breeze - which is essential for distributed teams or large projects.
 
-> Two great resources for learning git: the free [official Git Book](https://git-scm.com/book/en/v2), and [Pluralsight's Git Fundamentals](https://www.pluralsight.com/courses/git-fundamentals) by [James Kovacs](https://twitter.com/jameskovacs).
+> Two great resources for learning git: the free [official Git Book](https://git-scm.com/book/en/v2), and [Pluralsight's Git Fundamentals](/l/ps-home) by [James Kovacs](https://twitter.com/jameskovacs).
 
 ## 2. Docker
 
@@ -71,7 +71,7 @@ Why should you learn Ubuntu? **All of the above** is a good practical reason. Th
 
 There's a softer reason too, in the name of personal development. If you've always used Windows then when you first log into a Linux box <mark>you will have no idea how to do anything</mark>. It will take you completely out of your comfort zone, force you to learn a lot, and open a whole new set of doors.
 
-> I could have said 'Linux' for number 4, but I think Ubuntu is the best version of Linux and it's one of the easiest to migrate to from Windows. Plus I can plug my Pluralsight course, [Getting Started with Ubuntu](https://www.pluralsight.com/courses/ubuntu-getting-started) along with the free [Official Ubuntu Book (pdf)](http://www.svecc.com/SLUG/slug_pdf/The%20Official%20Ubuntu%20Book,%207th%20Edition.pdf).
+> I could have said 'Linux' for number 4, but I think Ubuntu is the best version of Linux and it's one of the easiest to migrate to from Windows. Plus I can plug my Pluralsight course, [Getting Started with Ubuntu](/l/ps-ubuntu) along with the free [Official Ubuntu Book (pdf)](http://www.svecc.com/SLUG/slug_pdf/The%20Official%20Ubuntu%20Book,%207th%20Edition.pdf).
 
 ### Disclaimer
 

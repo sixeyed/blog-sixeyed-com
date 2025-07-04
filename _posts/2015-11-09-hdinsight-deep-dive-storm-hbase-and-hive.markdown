@@ -12,7 +12,7 @@ tags:
 
 My latest Pluralsight course is out now:
 
-> [HDInsight Deep Dive: Storm, HBase and Hive](http://www.pluralsight.com/courses/hdinsight-deep-dive-storm-hbase-hive)
+> [HDInsight Deep Dive: Storm, HBase and Hive](/l/ps-hdinsight)
 
 It's an in-depth look at the Azure Big Data offerings that went live this year - HDInsight clusters running Storm, HBase and Hive. Those are three tried-and-trusted Big Data technologies from Apache, which you can run in the Azure cloud on a pay-as-you-go compute model.
 
@@ -66,7 +66,7 @@ Hive Deep Dive - HiveQL execution plans; monitoring jobs with YARN; filter push-
 
 ## Where does this course fit?
 
-HDInsight Deep Dive complements my previous Big Data course for Pluralsight - [Real World Big Data in Azure](http://www.pluralsight.com/courses/real-world-big-data-microsoft-azure). That takes a first-principles approach to Big Data and looks at building custom code to process it.
+HDInsight Deep Dive complements my previous Big Data course for Pluralsight - [Real World Big Data in Azure](/l/ps-azure-big-data). That takes a first-principles approach to Big Data and looks at building custom code to process it.
 
 Often that works well for your first Big Data project(s), but you can find the amount of code you need to maintain and the stack you have to monitor can slow you down.
 

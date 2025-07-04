@@ -135,7 +135,7 @@ This approach lets you leave all the original code in the monolith, and break ne
 
 A reverse proxy can also load-balance between containers, and take ownership of cross-cutting concerns like SSL, caching, compression, request logging, and authorization.
 
-> I cover the reverse proxy approach in detail in my Pluralsight course [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker).
+> I cover the reverse proxy approach in detail in my Pluralsight course [Modernizing .NET Framework Apps with Docker](/l/ps-home).
 
 ## Next Up
 

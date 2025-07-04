@@ -30,7 +30,7 @@ Tough question! Each one has their own perks and I'm fond of each of the ones yo
 
 Less so than before. Given Microsoft's shocking transformation into a services company (versus proprietary software only), there's a better vibe about what Microsoft is doing. The non-Microsoft camps still carry baggage about Microsoft's past behavior and products, but that group is shrinking. However, I still see a majority of innovative server platforms targeting Linux and only casually paying attention to Windows. I believe this will result in Microsoft-friendly shops still embracing more and more Linux, which means it's important for Microsoft-only devs to broaden their horizons just a bit!
 
-### 4. Your output is prolific so you must work very effectively. How religiously do you follow the advice from your own course, [Productivity Tips for the Busy Tech Professional](https://www.pluralsight.com/courses/productivity-tips-busy-tech-professional)?
+### 4. Your output is prolific so you must work very effectively. How religiously do you follow the advice from your own course, [Productivity Tips for the Busy Tech Professional](/l/ps-home)?
 
 * * *
 

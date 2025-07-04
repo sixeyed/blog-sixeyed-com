@@ -31,7 +31,7 @@ As an example, for a product with over 600K active clients per month, I proposed
 
 The basic approach is to work through your API and extract static responses for all the resources you're going to continueto support. That should be straightforward if you've documented your API with a tool like [Apiary](https://apiary.io).
 
-> Apiary is a great tool for collaborative API design - it's one I cover in detail in my Pluralsight course: [Five Essential Tools for Building REST APIs](https://www.pluralsight.com/courses/five-essential-tools-building-rest-api).
+> Apiary is a great tool for collaborative API design - it's one I cover in detail in my Pluralsight course: [Five Essential Tools for Building REST APIs](/l/ps-rest-apis).
 
 After your analysis you'll have resources which fall into one of these categories:
 
@@ -153,7 +153,7 @@ Running the API in Docker is as simple as `docker-compose up -d`, and then I can
                 "id": "news.item.2",
                 "priority": 150,
                 "headline":"HDInsight Deep Dive: Storm, HBase and Hive released",
-                "itemUrl":"https://www.pluralsight.com/courses/hdinsight-deep-dive-storm-hbase-hive"
+                "itemUrl":"/l/ps-hdinsight"
             }
         ]
     }

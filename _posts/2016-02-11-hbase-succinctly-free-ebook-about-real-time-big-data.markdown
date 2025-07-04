@@ -10,7 +10,7 @@ tags:
 
 The good people at SyncFusion have just published my first eBook, [HBase Succinctly](http://www.syncfusion.com/resources/techportal/details/ebooks/hbase). It's an 85-page introduction to [Apache HBase](http://hbase.apache.org/), the real-time database solution for Big Data, which is modelled on [Google's BigTable](http://research.google.com/archive/bigtable.html) and runs on top of [Hadoop](https://hadoop.apache.org/).
 
-> If you haven't seen it, the [Succinctly series](http://www.syncfusion.com/resources/techportal/ebooks) is a great set of eBooks, all free, all around 100 pages, which serve as a focused introduction to a topic. SyncFusion commission the books, but the content is totally independent so there's no product placement (although I do slip in the occasional plug for [my Pluralsight courses](https://www.pluralsight.com/authors/elton-stoneman)).
+> If you haven't seen it, the [Succinctly series](http://www.syncfusion.com/resources/techportal/ebooks) is a great set of eBooks, all free, all around 100 pages, which serve as a focused introduction to a topic. SyncFusion commission the books, but the content is totally independent so there's no product placement (although I do slip in the occasional plug for [my Pluralsight courses](/l/ps-home)).
 
 In the book I start with the basics of running HBase and the HBase Shell, and connecting to the different HBase server options using different clients. There are more advanced chapters on how to design tables effectively in HBase, how data is physically stored, the structure of an HBase cluster, and administration.
 

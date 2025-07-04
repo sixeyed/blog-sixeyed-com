@@ -69,7 +69,7 @@ Some things on Ubuntu are harder (there's no mail program to rival Outlook, and 
 
 If you want to use your existing .NET skills on your Ubuntu machine, you can do that with .NET Core - my post [Running .NET Core Apps in a Docker Container](https://blog.sixeyed.com/running-net-core-apps-in-a-linux-container/) walks through doing that.
 
-> And be sure to check out my five-star Pluralsight course, [Getting Started with Ubuntu](https://www.pluralsight.com/courses/ubuntu-getting-started) - which covers the desktop and server versions, building software and running Ubuntu in the cloud.
+> And be sure to check out my five-star Pluralsight course, [Getting Started with Ubuntu](/l/ps-ubuntu) - which covers the desktop and server versions, building software and running Ubuntu in the cloud.
 
 The rate of change in the tech world is so high that you can't keep up with it all - you have to focus on the areas you think are worth investing in. Learning Linux opens you up to even more new technologies - but at least you'll be able to work with the new stuff while it's new, rather than waiting for the Windows port.
 

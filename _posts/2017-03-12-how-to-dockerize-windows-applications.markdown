@@ -11,7 +11,7 @@ You can run any application in Docker as long as it can be installed and execute
 
 ## TL;DR
 
-> <mark>Update!</mark> For a full walkthrough on Dockerizing Windows apps, check out my book [Docker on Windows](https://amzn.to/2yxcQxN) and my Pluralsight course [Modernizing .NET Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker).
+> <mark>Update!</mark> For a full walkthrough on Dockerizing Windows apps, check out my book [Docker on Windows](https://amzn.to/2yxcQxN) and my Pluralsight course [Modernizing .NET Apps with Docker](/l/ps-home).
 
 Check out these examples:
 

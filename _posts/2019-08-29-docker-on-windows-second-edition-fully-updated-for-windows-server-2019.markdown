@@ -40,7 +40,7 @@ The last one is especially important. It helps you understand how to bring cloud
 ![Monitoring apps in Windows containers](/content/images/2019/08/dow-metrics.png)
 
 > If you want to learn more about observability in modern applications, check out my Pluralsight course [Monitoring Containerized Application Health with Docker  
-> ](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmonitoring-containerized-app-health-docker)
+> ](/l/ps-home)
 
 ## The Evolution of Windows Containers
 

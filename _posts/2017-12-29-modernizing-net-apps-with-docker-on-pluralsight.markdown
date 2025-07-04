@@ -8,9 +8,9 @@ tags:
 - pluralsight
 ---
 
-[My latest Pluralsight course](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker) is out now! It's a Docker course for .NET developers and architects who want to modernize existing applications, and run them in containers for portability, security and efficiency.
+[My latest Pluralsight course](/l/ps-home) is out now! It's a Docker course for .NET developers and architects who want to modernize existing applications, and run them in containers for portability, security and efficiency.
 
-> Watch now! [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker) on Pluralsight.
+> Watch now! [Modernizing .NET Framework Apps with Docker](/l/ps-home) on Pluralsight.
 
 You don't need any Docker knowledge to get going with this course, and if you already have Docker experience, you'll learn how to take your apps to production.
 

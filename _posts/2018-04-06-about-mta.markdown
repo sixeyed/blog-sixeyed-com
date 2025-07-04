@@ -94,7 +94,7 @@ You don't need a full re-architecture, you can break key features out of your ap
 
 Apps which justify a rebuild project will benefit from Docker's flexibility. You can break your app into small components, and use the right technology stack for each part. You can drop production-grade software into your solution from Docker Store, and upgrade custom components to use the latest approaches and frameworks.
 
-> I demonstrate all these techniques in my Pluralsight course, [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker), and my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/).
+> I demonstrate all these techniques in my Pluralsight course, [Modernizing .NET Framework Apps with Docker](/l/ps-home), and my book [Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/).
 
 ## Getting Started with your First App
 

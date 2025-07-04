@@ -61,7 +61,7 @@ I may have a few copies to give out at DockerCon EU too...
 
 # Pluralsight
 
-I didn't make it to [Pluralsight LIVE](https://www.pluralsight.com/event-details/2017/pluralsight-live-thank-you) - which looked like a fantastic conference, because I was at Ignite. But I did make some progress on my next course, which is all about modernizing .NET apps with Docker. This will be my [fifteenth Pluralsight course](https://www.pluralsight.com/authors/elton-stoneman).
+I didn't make it to [Pluralsight LIVE](https://www.pluralsight.com/event-details/2017/pluralsight-live-thank-you) - which looked like a fantastic conference, because I was at Ignite. But I did make some progress on my next course, which is all about modernizing .NET apps with Docker. This will be my [fifteenth Pluralsight course](/l/ps-home).
 
 The course follows the path of modernizing a full .NET Framework web application, running it in a Windows container and using Docker to modernize the architecture, development, deployment and management of the app.
 

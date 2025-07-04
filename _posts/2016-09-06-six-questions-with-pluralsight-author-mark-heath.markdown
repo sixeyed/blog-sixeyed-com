@@ -3,7 +3,7 @@ title: 'Six Questions with Pluralsight Author: Mark Heath'
 date: '2016-09-06 20:18:14'
 ---
 
-This time we have Six Questions with Pluralsight Author: [Mark Heath](https://www.pluralsight.com/authors/mark-heath). Mark is a software architect using the Microsoft stack, a regular [blogger](http://www.markheath.net) and speaker, and he runs the [NAudio](http://naudio.codeplex.com/) project - a fantastic [open source audio library for .NET](https://github.com/naudio/NAudio). Mark's courses cover a wide range of topics, including [digital audio](https://www.pluralsight.com/courses/digital-audio-fundamentals), [Windows Forms](https://www.pluralsight.com/courses/windows-forms-best-practices), [WPF](https://www.pluralsight.com/courses/mahappsdotmetro-creating-modern-wpf-apps), and [distributed version control](https://www.pluralsight.com/courses/understanding-distributed-version-control-systems).
+This time we have Six Questions with Pluralsight Author: [Mark Heath](https://www.pluralsight.com/authors/mark-heath). Mark is a software architect using the Microsoft stack, a regular [blogger](http://www.markheath.net) and speaker, and he runs the [NAudio](http://naudio.codeplex.com/) project - a fantastic [open source audio library for .NET](https://github.com/naudio/NAudio). Mark's courses cover a wide range of topics, including [digital audio](/l/ps-home), [Windows Forms](/l/ps-home), [WPF](/l/ps-home), and [distributed version control](/l/ps-home).
 
 Mark is based in the UK, so I've been fortunate to meet him a few times and he's a thoroughly nice guy - in addition to being a technical expert and an excellent teacher. Mark spoke at the first [Pluralsight Meet the Authors: UK MeetUp](http://www.meetup.com/Pluralsight-Meet-the-Authors-UK/), with a great session on [LINQ Tips and Tricks](http://markheath.net/post/linq-tips-and-tricks). There's a very practical side to Mark's digital audio knowledge too - he's the Pluralsight author other Pluralsight authors turn to when they need help with sound.
 
@@ -17,7 +17,7 @@ I feel like this last year has been one of the most intense years of learning in
 
 * * *
 
-The biggest challenge has been writing C# interop wrappers for the vast swathe of Windows Audio APIs, which has involved lots of trawling through the Windows SDK header files and having to think about COM threading models again which was something I'd hoped I'd left for good after switching my focus from C++ to C# and .NET back in 2001. Fortunately, Microsoft's most recent audio API, the UWP Audio Graph (which my most recent Pluralsight course is about - [UWP Audio Fundamentals](https://www.pluralsight.com/courses/uwp-audio-fundamentals)) - is ready to use in C# out of the box.
+The biggest challenge has been writing C# interop wrappers for the vast swathe of Windows Audio APIs, which has involved lots of trawling through the Windows SDK header files and having to think about COM threading models again which was something I'd hoped I'd left for good after switching my focus from C++ to C# and .NET back in 2001. Fortunately, Microsoft's most recent audio API, the UWP Audio Graph (which my most recent Pluralsight course is about - [UWP Audio Fundamentals](/l/ps-home)) - is ready to use in C# out of the box.
 
 ### 3. I know you've recently been working on a big greenfield project running on Azure. How does cloud-first delivery differ from an on-premise project?
 
@@ -29,7 +29,7 @@ Another obvious difference is the security stakes are even higher in the cloud. 
 
 There are also big supportability benefits for cloud deployed systems, since the support team can monitor and troubleshoot the system without having to make a site visit. But if highly sensitive data is involved, only one or two trusted people may be allowed access, which is the case in the system I'm working in.
 
-### 4. Your Pluralsight course [More Effective LINQ](https://www.pluralsight.com/courses/linq-more-effective) has been hugely popular - do you think LINQ has fulfilled the promise of being a single query language for any data source?
+### 4. Your Pluralsight course [More Effective LINQ](/l/ps-home) has been hugely popular - do you think LINQ has fulfilled the promise of being a single query language for any data source?
 
 * * *
 

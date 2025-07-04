@@ -6,7 +6,7 @@ tags:
 - windows
 ---
 
-> <mark>Update!</mark> You can learn everything you need to know about Windows containers and Docker from my book [Docker on Windows](https://amzn.to/2yxcQxN) and my Pluralsight course [Modernizing .NET Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker).
+> <mark>Update!</mark> You can learn everything you need to know about Windows containers and Docker from my book [Docker on Windows](https://amzn.to/2yxcQxN) and my Pluralsight course [Modernizing .NET Apps with Docker](/l/ps-home).
 
 [Ignite](https://ignite.microsoft.com/) is coming soon and with it, Windows Server 2016 will be released and Windows Containers will be available for production. We're not talking Docker-in-a-Linux-VM running on Windows - this is Docker running natively as a Windows Service. Here are five things to know in preparation.
 

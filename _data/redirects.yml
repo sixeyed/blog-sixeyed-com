@@ -1,0 +1,228 @@
+# Link redirects management
+# Add new redirects here - they'll be automatically generated as pages
+# Format: 
+#   - slug: short-url-slug (will become /l/short-url-slug)
+#     url: full destination URL (if empty, will use default_url)
+#     description: what this link is for (optional, for your reference)
+
+# Default URL to use when a redirect has no specific URL configured
+default_url: https://app.pluralsight.com/profile/author/elton-stoneman
+
+redirects:
+  # Pluralsight courses
+  - slug: ps-home
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Pluralsight author profile
+    
+  - slug: ps-istio
+    url: https://www.pluralsight.com/courses/kubernetes-istio-managing-apps
+    description: Managing Apps on Kubernetes with Istio
+    
+  - slug: ps-sre-path
+    url: https://www.pluralsight.com/paths/site-reliability-engineering-sre
+    description: SRE learning path
+    
+  - slug: ps-sre-concepts
+    url: https://www.pluralsight.com/courses/sre-concepts-principles
+    description: SRE Concepts and Principles course
+    
+  - slug: ps-sre-monitoring
+    url: https://www.pluralsight.com/courses/sre-monitoring-observability
+    description: SRE Monitoring and Observability course
+    
+  # Books
+  - slug: docker-book
+    url: https://www.manning.com/books/learn-docker-in-a-month-of-lunches
+    description: Learn Docker in a Month of Lunches
+    
+  - slug: k8s-book
+    url: https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches
+    description: Learn Kubernetes in a Month of Lunches
+    
+  # Other author profiles (for interviews/references)
+  - slug: craig-shoemaker
+    url: https://www.pluralsight.com/authors/craig-shoemaker
+    description: Craig Shoemaker's Pluralsight courses
+    
+  - slug: shawn-wildermuth
+    url: https://www.pluralsight.com/authors/shawn-wildermuth  
+    description: Shawn Wildermuth's Pluralsight courses
+    
+  # Social/Contact
+  - slug: github
+    url: https://github.com/sixeyed
+    description: GitHub profile
+    
+  - slug: linkedin
+    url: https://www.linkedin.com/in/eltonstoneman/
+    description: LinkedIn profile
+    
+  # Legacy redirects (replace pxf.io links)
+  # Short code format pxf.io links - redirect to primary slugs
+    
+  - slug: ps-31WqX
+    url: https://www.pluralsight.com/courses//site-reliability-engineering-big-picture-2024
+    description: Legacy pxf.io redirect for Site Reliability Engineering (SRE) The Big Picture
+    
+  - slug: ps-yNAPv
+    url: https://www.pluralsight.com/courses/using-managing-jenkins-plugins
+    description: Legacy pxf.io redirect for Using and Managing Jenkins Plugins
+    
+  - slug: ps-Ld4Nj
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Docker and Kubernetes The Big Picture
+    
+  - slug: ps-VDBXA
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Nigel Poulton's author profile
+    
+  - slug: ps-BdbL1
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Docker for Web Developers
+    
+  - slug: ps-WQRoP
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Docker Swarm Mode Getting Started
+    
+  - slug: ps-Bdb7q
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Docker Deep Dive
+    
+  - slug: ps-n6omX
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Getting Started with Docker
+    
+  - slug: ps-20M4Q
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Managing Kubernetes Controllers and Deployments
+    
+  - slug: ps-Ddn4d
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Docker Images and Containers for ASP.NET Core
+    
+  - slug: ps-9dOK3
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Kubernetes Installation and Configuration Fundamentals
+    
+  - slug: ps-X9ObX
+    url: https://app.pluralsight.com/profile/author/elton-stoneman
+    description: Legacy pxf.io redirect for Docker Networking
+    
+  - slug: ps-dooo1Q
+    url: https://www.pluralsight.com/courses/deploying-containerized-applications
+    description: Legacy pxf.io redirect for Deploying Containerized Applications
+    
+  - slug: ps-baYA1g
+    url: https://www.pluralsight.com/courses/site-reliability-engineering-big-picture-2024
+    description: Legacy pxf.io redirect for Site Reliability Engineering (SRE) The Big Picture
+    
+  - slug: ps-EK7ovW
+    url: https://www.pluralsight.com/courses/getting-started-prometheus
+    description: Legacy pxf.io redirect for Getting Started with Prometheus
+    
+  - slug: ps-oqYEZo
+    url: https://www.pluralsight.com/courses/deploying-containerized-applications
+    description: Legacy pxf.io redirect for Deploying Containerized Applications (alternate)
+    
+  - slug: ps-DPOAj
+    url: https://www.pluralsight.com/courses/using-declarative-jenkins-pipelines
+    description: Legacy pxf.io redirect for Using Declarative Jenkins Pipelines
+    
+  - slug: ps-Py73Nj
+    url: https://www.pluralsight.com/courses/c-sharp-developers-idisposable-best-practices
+    description: Legacy pxf.io redirect for IDisposable Best Practices in C#
+    
+  - slug: ps-Y97Q3e
+    url: https://www.pluralsight.com/courses//modernizing-dotnet-framework-apps-docker
+    description: Legacy pxf.io redirect for Developing .NET Framework Apps with Docker
+    
+  - slug: ps-xkY4Py
+    url: https://www.pluralsight.com/courses/using-managing-jenkins-plugins
+    description: Legacy pxf.io redirect for Using and Managing Jenkins Plugins
+    
+  # Your own courses (frequently promoted)
+  - slug: ps-modernizing-dotnet
+    url: https://www.pluralsight.com/courses//modernizing-dotnet-framework-apps-docker
+    description: Legacy pxf.io redirect for Modernizing .NET Framework Apps with Docker
+    
+  - slug: ps-container-health
+    url: https://www.pluralsight.com/courses/kubernetes-istio-managing-apps
+    description: Legacy pxf.io redirect for Monitoring Containerized Application Health with Docker
+    
+  - slug: ps-docker-swarm-load-balancing
+    url: 
+    description: Legacy pxf.io redirect for Managing Load Balancing and Scale in Docker Swarm Mode Clusters
+    
+  - slug: ps-docker-datacenter
+    url: 
+    description: Legacy pxf.io redirect for Getting Started with Docker Datacenter
+    
+  # Other courses you've promoted
+  - slug: ps-idisposable
+    url: https://www.pluralsight.com/courses/c-sharp-developers-idisposable-best-practices
+    description: Legacy pxf.io redirect for IDisposable Best Practices for C# Developers
+    
+  - slug: ps-reactive-manifesto
+    url: 
+    description: Legacy pxf.io redirect for Implementing Reactive Manifesto on Azure & AWS
+    
+  - slug: ps-azure-powershell
+    url: 
+    description: Legacy pxf.io redirect for Managing Azure IaaS with PowerShell
+    
+  - slug: ps-hdinsight
+    url: 
+    description: Legacy pxf.io redirect for HDInsight Deep Dive Storm HBase & Hive
+    
+  - slug: ps-hadoop-dotnet
+    url: 
+    description: Legacy pxf.io redirect for Hadoop for .NET Developers
+    
+  - slug: ps-rest-apis
+    url: 
+    description: Legacy pxf.io redirect for Five Essential Tools for Building REST APIs
+    
+  - slug: ps-specflow
+    url: 
+    description: Legacy pxf.io redirect for Executable Specifications in SpecFlow
+    
+  - slug: ps-message-queues
+    url: 
+    description: Legacy pxf.io redirect for Message Queue Fundamentals in .NET
+    
+  - slug: ps-csharp-extensions
+    url: https://www.pluralsight.com/courses/c-sharp-extension-methods
+    description: Legacy pxf.io redirect for C# Extension Methods
+    
+  - slug: ps-dotnet-caching
+    url: 
+    description: Legacy pxf.io redirect for .NET Caching Inside Out
+    
+  - slug: ps-ubuntu
+    url: 
+    description: Legacy pxf.io redirect for Ubuntu Getting Started
+    
+  - slug: ps-azure-big-data
+    url: 
+    description: Legacy pxf.io redirect for Real-World Big Data in Microsoft Azure
+    
+  - slug: ps-nginx-php
+    url: 
+    description: Legacy pxf.io redirect for NGINX and PHP Fundamentals
+    
+  - slug: ps-containers-path
+    url: 
+    description: Legacy pxf.io redirect for Managing Containers with Docker learning path
+    
+  # Campaign/promotional links
+  - slug: ps-free-weekend
+    url: https://www.pluralsight.com/pricing/free-trial
+    description: Legacy pxf.io redirect for Pluralsight free weekend promotions
+    
+  - slug: ps-free-april
+    url: https://www.pluralsight.com/pricing/free-trial
+    description: Legacy pxf.io redirect for FREE April on Pluralsight promotion
+    
+  - slug: YMBGB
+    url: /l/ps-home
+    description: Legacy pxf.io redirect for author profile - redirects to primary

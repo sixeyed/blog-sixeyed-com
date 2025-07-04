@@ -6,7 +6,7 @@ tags:
 - six-questions
 ---
 
-On this week's "Six Questions with..." I'm interviewing [Craig Shoemaker](http://twitter.com/craigshoemaker): [blogger](http://craigshoemaker.net/), [writer](http://craigshoemaker.net/publications), [podcaster](http://polymorphicpodcast.com/), [10-time Microsoft MVP](https://mvp.microsoft.com/en-us/PublicProfile/36849) and author of [9 great Pluralsight courses](http://www.pluralsight.com/authors/craig-shoemaker), covering Web and Microsoft technologies.
+On this week's "Six Questions with..." I'm interviewing [Craig Shoemaker](http://twitter.com/craigshoemaker): [blogger](http://craigshoemaker.net/), [writer](http://craigshoemaker.net/publications), [podcaster](http://polymorphicpodcast.com/), [10-time Microsoft MVP](https://mvp.microsoft.com/en-us/PublicProfile/36849) and author of [9 great Pluralsight courses](/l/craig-shoemaker), covering Web and Microsoft technologies.
 
 Craig somehow manages to juggle his role at [Infragistics](http://infragistics.com/) with a stack of content production and a good-sized family, so I much appreciate him taking the time to join the Six Questions series.
 
@@ -58,6 +58,6 @@ The idea that any technology should be used by everyone on every project misses 
 
 Now, there are some common principles that we as professionals should endeavour to introduce to each project we encounter. Concepts like automated testing and exception management come to mind as practices that belong in just about every situation, but other than that the answer - as always - is it depends ;)
 
-> Great answers, thanks Craig! More interviews coming soon, and until then you'll have time to check out [Craig's Pluralsight courses](https://www.pluralsight.com/authors/craig-shoemaker).
+> Great answers, thanks Craig! More interviews coming soon, and until then you'll have time to check out [Craig's Pluralsight courses](/l/craig-shoemaker).
 
 <!--kg-card-end: markdown-->

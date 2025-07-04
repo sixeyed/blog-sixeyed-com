@@ -10,7 +10,7 @@ tags:
 
 My latest Pluralsight course is live! This one covers all you need to know about monitoring apps when you're running in Docker containers on Linux and Windows:
 
-> [Monitoring Containerized Application Health with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmonitoring-containerized-app-health-docker)
+> [Monitoring Containerized Application Health with Docker](/l/ps-home)
 
 It comes in just under three hours, and it teaches you the whole theory and practice for monitoring containers - using the industry-standard tools [Prometheus](https://prometheus.io) and [Grafana](https://grafana.com).
 
@@ -123,11 +123,11 @@ I cover the same for Prometheus too, so you end up with Dockerfiles for Promethe
 
 This course is part of the Docker learning path, which has excellent content from [Docker Captain Nigel Poulton](https://twitter.com/nigelpoulton) (among others):
 
-> [Managing Containers with Docker - Pluralsight learning path](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fapp.pluralsight.com%2Fpaths%2Fskills%2Fmanaging-containers-with-docker)
+> [Managing Containers with Docker - Pluralsight learning path](/l/ps-containers-path)
 
-One course .NET folks will find useful isn't on that path, my [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker). But that one is in [Scott Hanselman](https://twitter.com/shanselman)'s great things-to-learn channel:
+One course .NET folks will find useful isn't on that path, my [Modernizing .NET Framework Apps with Docker](/l/ps-home). But that one is in [Scott Hanselman](https://twitter.com/shanselman)'s great things-to-learn channel:
 
-> [Stuff you want to learn in 2018 - Pluralsight channel](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fapp.pluralsight.com%2Fchannels%2Fdetails%2F440fc1d5-a29a-42d8-9cb5-dbcd3d14d20e)
+> [Stuff you want to learn in 2018 - Pluralsight channel](/l/ps-home)
 
 That lot should get you pretty far in your Docker journey :)
 

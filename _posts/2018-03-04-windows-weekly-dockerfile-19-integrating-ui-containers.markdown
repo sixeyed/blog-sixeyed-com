@@ -66,7 +66,7 @@ The URL in that variable is used in the [HomeController](https://github.com/sixe
         _NewHomePageHtml = responseStream.ReadToEnd();
       } 
 
-> Yes you should be [using IDisposable correctly](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fidisposable-best-practices-csharp-developers), like in this example.
+> Yes you should be [using IDisposable correctly](/l/ps-home), like in this example.
 
 And then the `Index` route gets rendered by returning the content of that HTML instead of the actual view in the MVC app:
 
@@ -118,7 +118,7 @@ The new UI is coming from the homepage container, but it doesn't have the same [
 
 As a POC we're done here. To carry on with this approach you'd need to make sure the main application container packages all the content the other UI containers expect to render.
 
-> But really you should look into the reverse proxy option, which I cover in [Modernizing .NET Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker)
+> But really you should look into the reverse proxy option, which I cover in [Modernizing .NET Apps with Docker](/l/ps-home)
 
 ## Next Up
 

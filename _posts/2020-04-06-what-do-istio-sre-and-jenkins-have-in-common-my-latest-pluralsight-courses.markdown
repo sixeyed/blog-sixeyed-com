@@ -9,13 +9,13 @@ tags:
 
 One of my goals for 2020 was to publish much more content, and I've started well with a new Pluralsight course every month :) Here's what's new.
 
-> And it's [FREE April on Pluralsight](https://pluralsight.pxf.io/c/1197078/796093/7490) so you can watch these all now for free!
+> And it's [FREE April on Pluralsight](/l/ps-free-april) so you can watch these all now for free!
 
 ## Managing Apps on Kubernetes with Istio
 
 I've been using Istio for 18 months or so, and I really like it - but it has a pretty steep learning curve, so I was glad to get this course out. It covers the basics of service mesh technology and the patterns it supports, focusing on the key features of Istio.
 
-> [Managing Apps on Kubernetes with Istio](https://pluralsight.pxf.io/Rrr3a)
+> [Managing Apps on Kubernetes with Istio](/l/ps-istio)
 
 You'll get more out of this one if you have a working knowledge of Docker and Kubernetes, but if you don't have that this course will still give you a good understanding of service mesh architectures.
 
@@ -47,7 +47,7 @@ The first time I worked on a DevOps project was in 2014 (the same year I started
 
 DevOps is just too big a change for a lot of places, and for them Site Reliability Engineering is likely to be a much better fit.
 
-> [Site Reliability Engineering (SRE): The Big Picture](https://pluralsight.pxf.io/31WqX)
+> [Site Reliability Engineering (SRE): The Big Picture](/l/ps-31WqX)
 
 This is a high-level big picture course - I think it's the first one I've done with no demos - and it introduces all the principles and practices. It's aimed at helping you evaluate SRE and understand the path to implementing it:
 
@@ -77,7 +77,7 @@ Ah, Jenkins. Myself and several other Pluralsight authors are busy building cour
 
 My first contribution is aimed at helping you get the most out of plugins - which is a big topic because pretty much all the useful functionality of Jenkins comes from plugins.
 
-> [Using and Managing Jenkins Plugins](https://pluralsight.pxf.io/yNAPv)
+> [Using and Managing Jenkins Plugins](/l/ps-yNAPv)
 
 This is partly a walkthrough of some of the must-have plugins for freestyle and pipeline jobs, but it's also about effective management of plugins, so you don't find yourself updating a plugin for a security fix and end up breaking all of your jobs (seen it happen). It covers:
 

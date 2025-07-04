@@ -80,7 +80,7 @@ You also get load balancing for incoming traffic across your containers using Do
 
 The ingress network means traffic can come into any node of the swarm, and Docker will route it to a listening container. If there are zero replicas running on the node that received the request, it gets silently redirected to another node where the are containers running. If there are multiple replicas, Docker takes care of load-balancing.
 
-> I go into a lot more detail on this in my course [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmanaging-load-balancing-scale-docker-swarm-clusters)
+> I go into a lot more detail on this in my course [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](/l/ps-home)
 
 It's a great feature, but it wasn't supported for Windows containers in Server 2016. You had to use [host-mode publishing](https://docs.docker.com/engine/swarm/services/#publish-a-services-ports-directly-on-the-swarm-node), which means you can only run one container per server if you want to have public accessible ports. (In practice people run Windows workloads as [global services](https://docs.docker.com/engine/swarm/services/#replicated-or-global-services), or front-end them with a reverse proxy running on Linux containers in a hybrid swarm).
 
@@ -127,7 +127,7 @@ There are two modes for service discovery: [VIP and DNSRR](https://docs.docker.c
 
 VIP is the better option because it doesn't cause any issues for clients which cache DNS responses (which is almost every DNS client). If containers are replaced in the service, the virtual IP address stays the same, and client requests will always get routed to an active container. DNSRR can cause issues if clients cache the response, because the response is a single container's IP address, and when that container gets replaced the client can't reach the service - until the DNS caches expires and it gets a new response.
 
-> There **are** good uses for DNSRR, especially for clustered technologies which use DNS to discover other nodes in the cluster. [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmanaging-load-balancing-scale-docker-swarm-clusters) covers this too.
+> There **are** good uses for DNSRR, especially for clustered technologies which use DNS to discover other nodes in the cluster. [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](/l/ps-home) covers this too.
 
 Windows Server 2016 only supported DNSRR service discovery, but 2019 supports VIP too. Together with ingress networking, it means you can run highly available, highly scalable and resilient services in swarm mode.
 

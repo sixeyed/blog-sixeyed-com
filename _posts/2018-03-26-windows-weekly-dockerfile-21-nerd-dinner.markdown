@@ -72,7 +72,7 @@ The most obvious change to the code and the Dockerfile is the use of environment
 
 This works fine, but I've changed how I do this now. I prefer to stick with the standard .NET configuration system, and use symbolic links with [Docker config](https://docs.docker.com/engine/swarm/configs/) objects and [Docker secrets](https://docs.docker.com/engine/swarm/secrets/). That way the code stays true to the .NET way of doing things, but still integrates nicely with Docker.
 
-> I do this in my [Modernizing .NET Apps - for Developers](https://dockr.ly/mta-dev) YouTube series, and cover it in more detail in my Pluralsight course [Modernizing .NET Framework Apps with Docker](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmodernizing-dotnet-framework-apps-docker). You can get the gist from [this startup script](https://github.com/dockersamples/mta-netfx-dev/blob/part-5/docker/web/start.ps1).
+> I do this in my [Modernizing .NET Apps - for Developers](https://dockr.ly/mta-dev) YouTube series, and cover it in more detail in my Pluralsight course [Modernizing .NET Framework Apps with Docker](/l/ps-home). You can get the gist from [this startup script](https://github.com/dockersamples/mta-netfx-dev/blob/part-5/docker/web/start.ps1).
 
 ## Usage
 

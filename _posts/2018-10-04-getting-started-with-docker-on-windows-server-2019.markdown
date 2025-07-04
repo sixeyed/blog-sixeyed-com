@@ -110,7 +110,7 @@ One of the enhancements for Docker in Windows Server 2019 is that loopback addre
 
 I'll post a longer explanation of what you can do with Docker in Windows Server 2019 that you couldn't do in Windows Server 2016, but here's just one other thing: <mark>Windows Server 2019 now supports <a href="https://docs.docker.com/engine/swarm/ingress/">ingress networking</a> for Docker swarm mode</mark>. That means you can run multiple containers on one server, all listening on the same port, and Docker will load-balance incoming requests between the containers.
 
-> I have lots more detail on this in my Pluralsight course [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmanaging-load-balancing-scale-docker-swarm-clusters)
+> I have lots more detail on this in my Pluralsight course [Managing Load Balancing and Scale in Docker Swarm Mode Clusters](/l/ps-home)
 
 Switch your server to a single-node swarm:
 
