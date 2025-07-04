@@ -161,28 +161,32 @@ $right-sidebar-width-wide: 300px !default;
   }
 }
 
-/* Mobile sidebar - collapse to just titles */
-@media (max-width: 768px) {
-  /* Hide detailed course and book listings on mobile */
-  .sidebar .panel-courses,
-  .sidebar .course-date {
+/* Mobile and tablet sidebar - fix at all screen sizes below 1024px */
+@media (max-width: 1023px) {
+  /* Hide detailed course listings on mobile */
+  .sidebar .panel-courses {
     display: none;
   }
   
-  /* Make section titles clickable and add visual cues */
+  /* Hide entire books section on mobile */
+  .sidebar .books-section {
+    display: none;
+  }
+  
+  /* Keep only 'My Pluralsight Courses' title as a compact link */
   .sidebar .nav__sub-title {
     display: block;
-    padding: 0.75em 1em;
-    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    margin: 0.5em 0 1em 0;
     background-color: #f8f9fa;
     border-radius: 4px;
     text-align: center;
     border: 1px solid #e9ecef;
     transition: background-color 0.2s ease;
-    cursor: pointer;
     text-decoration: none;
     color: inherit;
     font-weight: 500;
+    font-size: 0.9em;
   }
   
   .sidebar .nav__sub-title:hover {
@@ -196,9 +200,107 @@ $right-sidebar-width-wide: 300px !default;
     display: none;
   }
   
+  /* Fix the author profile container */
+  .sidebar .h-card {
+    width: 100%;
+  }
+  
+  /* Keep avatar and social links side by side */
+  .sidebar .author__avatar {
+    display: table !important;
+    width: auto !important;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .author__avatar > a {
+    display: table-cell !important;
+    vertical-align: middle;
+    width: auto;
+    padding-right: 15px;
+  }
+  
+  .sidebar .author__avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+  }
+  
+  /* Make social links appear immediately to the right */
+  .sidebar .author__urls-wrapper {
+    display: table-cell !important;
+    vertical-align: middle;
+    padding-left: 0;
+  }
+  
+  /* Hide the Follow button */
+  .sidebar .author__urls-wrapper button {
+    display: none !important;
+  }
+  
+  /* Force social links to be visible */
+  .sidebar .author__urls {
+    display: block !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-size: 0.85em;
+  }
+  
+  .sidebar .author__urls .btn {
+    padding: 0.3em 0.6em;
+    font-size: 0.85em;
+  }
+  
+  /* Ensure author content appears below */
+  .sidebar .author__content {
+    display: block !important;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Center author name on mobile */
+  .sidebar .author__name {
+    text-align: center !important;
+    margin: 0.5em 0;
+  }
+  
+  .sidebar .author__bio {
+    text-align: center;
+    margin: 0.5em 0 1em 0;
+    font-size: 0.9em;
+  }
+  
+  /* Keep social links visible and nicely spaced */
+  .sidebar .author__urls {
+    margin-top: 1em;
+    text-align: center;
+  }
+  
+  .sidebar .author__urls li {
+    margin-bottom: 0.5em;
+  }
+  
+  .sidebar .author__urls .btn {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+  }
+  
   /* Make the entire sidebar more compact on mobile */
   .sidebar {
     margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  /* Ensure author profile sections stack properly */
+  .sidebar .author__content {
+    text-align: center;
   }
 }
 
