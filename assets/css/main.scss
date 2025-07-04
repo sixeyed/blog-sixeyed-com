@@ -161,6 +161,47 @@ $right-sidebar-width-wide: 300px !default;
   }
 }
 
+/* Mobile sidebar - collapse to just titles */
+@media (max-width: 768px) {
+  /* Hide detailed course and book listings on mobile */
+  .sidebar .panel-courses,
+  .sidebar .course-date {
+    display: none;
+  }
+  
+  /* Make section titles clickable and add visual cues */
+  .sidebar .nav__sub-title {
+    display: block;
+    padding: 0.75em 1em;
+    margin: 0.5em 0;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+  }
+  
+  .sidebar .nav__sub-title:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove animated arrows on mobile */
+  .sidebar .nav__sub-title i {
+    display: none;
+  }
+  
+  /* Make the entire sidebar more compact on mobile */
+  .sidebar {
+    margin-bottom: 1em;
+  }
+}
+
 .sidebar .author__name {
     text-transform: uppercase;
     background-color: aliceblue;
