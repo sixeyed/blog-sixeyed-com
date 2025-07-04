@@ -19,6 +19,148 @@ $right-sidebar-width-wide: 300px !default;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* Homepage post layout - 60% text, 40% hero image */
+.list__item {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1.5em;
+}
+
+.list__item .archive__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+.list__item .archive__item-content {
+  flex: 0 0 60%;
+  align-self: flex-start;
+}
+
+.list__item .archive__item-teaser {
+  flex: 0 0 40%;
+  order: 2;
+  align-self: flex-start;
+}
+
+.list__item .archive__item-teaser img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 0;
+}
+
+/* Ensure title and content start at the same level as image */
+.list__item .archive__item-title {
+  margin-top: 0;
+}
+
+.list__item .page__meta {
+  margin-top: 0.25em;
+}
+
+/* Mobile responsiveness for homepage layout */
+@media (max-width: 768px) {
+  .list__item .archive__item {
+    flex-direction: column;
+  }
+  
+  .list__item .archive__item-content {
+    flex: 1;
+    order: 2;
+  }
+  
+  .list__item .archive__item-teaser {
+    flex: 1;
+    order: 1;
+    margin-bottom: 1em;
+  }
+  
+  .list__item .archive__item-teaser img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list__item .archive__item-teaser img {
+    height: 120px;
+  }
+}
+
+/* Hero image inside article content */
+.page__hero {
+  position: relative;
+  margin: 1.5em 0 2em 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.page__hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive hero image inside posts */
+@media (max-width: 768px) {
+  .page__hero {
+    margin: 1em 0 1.5em 0;
+  }
+  
+  .page__hero-img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page__hero {
+    margin: 0.75em 0 1.25em 0;
+    border-radius: 6px;
+  }
+  
+  .page__hero-img {
+    max-height: 200px;
+  }
+}
+
+/* Non-hero images in post content - preserve small images, resize large ones */
+.page__content img:not(.page__hero-img) {
+  max-width: 90%;
+  height: auto;
+  margin: 1em 0 1em 0;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  
+  /* Left-align all images */
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Ensure images in paragraphs are also left-aligned */
+.page__content p img:not(.page__hero-img) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Responsive adjustments for content images */
+@media (max-width: 768px) {
+  .page__content img:not(.page__hero-img) {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page__content img:not(.page__hero-img) {
+    max-width: 100%;
+  }
+}
+
 .sidebar .author__name {
     text-transform: uppercase;
     background-color: aliceblue;
