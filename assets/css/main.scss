@@ -348,3 +348,38 @@ $right-sidebar-width-wide: 300px !default;
     margin-left: 20px;
     margin-top: 10px;
 }
+
+/* Standardize font sizes across the site */
+/* Base font size for better readability */
+html {
+  font-size: 18px; /* Standard for tech blogs */
+}
+
+/* Homepage excerpt text - match post content */
+.archive__item-excerpt {
+  font-size: 1rem !important; /* 18px - matches body text */
+  line-height: 1.6;
+  color: #494e52;
+}
+
+/* Ensure post content maintains good readability */
+.page__content {
+  font-size: 1rem;
+  line-height: 1.7;
+  
+  p {
+    margin-bottom: 1.3em;
+  }
+}
+
+/* Slightly smaller for metadata */
+.page__meta {
+  font-size: 0.85rem;
+}
+
+/* Responsive font sizing */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px; /* Slightly smaller on mobile */
+  }
+}

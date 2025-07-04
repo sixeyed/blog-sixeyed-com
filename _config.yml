@@ -17,7 +17,7 @@ title: Elton's Blog
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Notes from the field of freelance IT consultant and trainer Elton Stoneman - 
-  14x Microsoft MVP, Docker Captain and author for Pluralsight and Manning.
+  15x Microsoft MVP, Docker Captain and author for Pluralsight and Manning.
 twitter_username: eltonstoneman
 github_username: sixeyed
 minimal_mistakes_skin: default
@@ -70,7 +70,7 @@ plugins:
 author:
   name   : "Elton Stoneman"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Freelance consultant and trainer. 14x Microsoft MVP. Manning Author. Pluralsight Author. "
+  bio    : "Freelance consultant and trainer. 15x Microsoft MVP. Pluralsight Author. Manning Author."
   uri: /l/ps-home
   github: sixeyed
   twitter: EltonStoneman
