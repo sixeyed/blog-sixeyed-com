@@ -4,12 +4,17 @@ date: '2024-10-16 08:00:00'
 tags:
 - helm
 - kubernetes
-description: Sometimes you want to run a Helm upgrade command but stop it doing anything. Here's how to lock your release to do that.
+- devops
+- helm-charts
+description: Learn how to lock Helm releases in Kubernetes to prevent unwanted upgrades and downgrades. This step-by-step guide shows you how to manipulate Helm secrets to create release locks, protecting your shared services from version conflicts across multiple environments.
 header:
   teaser: /content/images/2024/10/helm-locked.png
+  alt: "Diagram showing a locked Helm release with pending status preventing upgrades and downgrades"
 ---
 
-It's great having a single 'Up' pipeline for your apps which deploys the whole stack, creating whatever resources it needs and ensuring the deployment matches the spec in your source repo. Idempotence is the key here so your IaC will create or update infrastructure as required, and if you're using Kubernetes and Helm then you get desired-state deployment for the software.
+## The Challenge: Preventing Unwanted Helm Upgrades and Downgrades
+
+It's great having a single 'Up' pipeline for your apps which deploys the whole stack, creating whatever resources it needs and ensuring the deployment matches the spec in your source repo. Idempotence is the key here so your IaC will create or update infrastructure as required, and if you're using [Kubernetes](/getting-started-with-kubernetes-on-windows/) and Helm then you get desired-state deployment for the software.
 
 One small issue you might see is if you have common services - say a data storage or monitoring subsystem - which are shared for multiple deployments of the app. If those deployments are different test environments running from different branches of the code then you might get into a tricky scenario:
 
@@ -26,7 +31,7 @@ When Helm installs and upgrades get interrupted they can leave the release in a 
 
 The scripting for this is fairly simple, but it does rely on the internals of how Helm represents a release, so it's liable to be broken at some point (it's working as of Helm 3.16). Every time you install or upgrade a release Helm creates a Kubernetes Secret which contains an encoded representation of the release. 
 
-You can try this with a simple Helm chart from my book [Learn Kubernetes in a Month of Lunches](https://amzn.to/3x3O7mt):
+You can try this with a simple Helm chart from my book [Learn Kubernetes in a Month of Lunches](https://amzn.to/3x3O7mt) (see also my [Docker book announcement](/learn-docker-in-a-month-of-lunches-my-new-book/)):
 
 ```
 helm repo add kiamol https://kiamol.net
@@ -177,3 +182,13 @@ TEST SUITE: None
 ```
 
 All that's left is to tidy up the Bash script and wrap it into a Docker image with `bash`, `kubectl` and `yq` installed so you can run it without needing all the dependencies...
+
+## Related Reading
+
+If you're working with Kubernetes and containers, you might find these related posts helpful:
+
+- [Getting Started with Kubernetes on Windows](/getting-started-with-kubernetes-on-windows/) - A comprehensive introduction to setting up Kubernetes on Windows
+- [This Blog Runs on Docker and Kubernetes in Azure](/this-blog-runs-on-docker-and-kubernetes-in-azure/) - Real-world example of running production workloads on Kubernetes
+- [You Can't Always Have Kubernetes: Running Containers in Azure VM Scale Sets](/you-cant-always-have-kubernetes-running-containers-in-azure-vm-scale-sets/) - Alternative approaches when Kubernetes isn't suitable
+
+For more container orchestration insights, check out my [Docker and Kubernetes learning resources](/learn-docker-in-a-month-of-lunches-my-new-book/).

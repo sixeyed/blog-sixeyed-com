@@ -53,7 +53,8 @@ You can spin up Windows VMs with GPUs in Azure, and have Docker already installe
 
 The design I sketched out looked like this:
 
-![Running containers in Virtual Machin Scale Set, with a load balancer directing traffic to container ports](/content/images/2021/02/vmss-containers.png)
+![Running containers in Virtual Machine Scale Set, with a load balancer directing traffic to container ports](/content/images/2021/02/vmss-containers.png)
+{: alt="Architecture diagram showing Azure VM Scale Set with load balancer distributing traffic to Docker containers running on multiple Windows VMs with GPU support"}
 
 - each VM hosts multiple containers, each using custom ports
 - a load balancer spans all the VMs in the scale set
@@ -215,5 +216,7 @@ So the final pipeline looks like this:
 > I covered GitHub workflows with Docker in [ECS-C2: Continuous Deployment with Docker and GitHub](https://eltons.show/ecs-c2) on YouTube
 
 Neat and automated for a reliable and scalable deployment. Just don't tell anyone we're running containers on individual servers, instead of using an orchestrator...
+
+> Want to learn more about container orchestration? Check out my guide on [Getting Started with Kubernetes on Windows](/getting-started-with-kubernetes-on-windows/) or explore my [Docker and Kubernetes learning path](/tags/#kubernetes).
 
 <!--kg-card-end: markdown-->

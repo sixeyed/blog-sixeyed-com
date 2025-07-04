@@ -5,7 +5,7 @@ tags:
 - tracing
 - opentelemetry
 - dotnet
-description: Part 2 of the distributed tracing serires, walks through running the demo code in Docker containers and visualizing traces in Tempo.
+description: Part 2 of the distributed tracing series, walks through running the demo code in Docker containers and visualizing traces in Grafana Tempo with step-by-step instructions.
 header:
   teaser: /content/images/2024/07/workflow-2-error.png
 ---
@@ -131,10 +131,12 @@ The worker is configured with two exporters - the console exporter prints traces
 You can open Grafana at http://localhost:3000/explore - no credentials needed for this deployment. Tempo is already configured as a data source, so you can select the _Search_ tab and explore the traces coming in:
 
 ![Searching for workflows in Grafana](/content/images/2024/07/workflow-2-grafana-search.png)
+{: alt="Grafana search interface showing distributed tracing results for workflows"}
 
 Traces aren't shown in their entirety until all the child spans are complete, but when that happens you can drill into a Workflow to see the details:
 
 ![Visualizing a workflow as a trace](/content/images/2024/07/workflow-1-tempo.png)
+{: alt="Tempo trace visualization showing workflow stages and timing in Grafana"}
 
 The OpenTelemtry spec lets you record additional data with traces and spans as tags (arbitrary key-value pairs) and events (with timestamps). The Workflow monitor actor sets the key details when it starts the Activity:
 
@@ -167,6 +169,7 @@ if (currentStatus != _lastStatus)
 Those shows nicely in Grafana, showing the timestamp relative to the span:
 
 ![Events in spans showing in Grafana](/content/images/2024/07/workflow-2-events.png)
+{: alt="OpenTelemetry events timeline showing workflow status changes in trace spans"}
 
 And finally when all the Entity processing has completed, we can end the Activity. The API can respond with a lengthy set of errors if there's been a failure but we don't need to record all that - just flagging the Activity with a status code of OK or Error will flow through into Tempo:
 
@@ -186,7 +189,8 @@ Activity.Stop();
 
 Tags and attributes can all be used for filtering in Grafana, so you can search for failures or build a dashboard with a table for errored workflows. In the detail you see the status and the error message:
 
-![Errored worfklows show the status and error message](/content/images/2024/07/workflow-2-error.png)
+![Errored workflows show the status and error message](/content/images/2024/07/workflow-2-error.png)
+{: alt="Error status displayed in Grafana trace showing workflow failure details"}
 
 ## On to Production
 

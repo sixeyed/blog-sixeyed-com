@@ -18,7 +18,7 @@ You can use GitHub's own servers (in Azure) to run your workflows - they call th
 
 The downside of using GitHub's runners is that every job starts with a fresh environment. That means no Docker build cache and no pre-pulled images (apart from [these Linux base images](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu1804-README.md#cached-docker-images) on the Ubuntu runner and [these on Windows](https://github.com/actions/virtual-environments/blob/main/images/win/Windows2019-Readme.md#cached-docker-images)). If your Dockerfiles are heavily optimized to use the cache, you'll suddenly lose all that benefit because every run starts with an empty cache.
 
-### Speeding up the build farm
+## Speeding up the build farm
 
 You have quite a few options here. [Caching Docker builds in GitHub Actions: Which approach is the fastest? 🤔 A research](https://dev.to/dtinth/caching-docker-builds-in-github-actions-which-approach-is-the-fastest-a-research-18ei) by [Thai Pangsakulyanont](https://twitter.com/dtinth) gives you an excellent overview:
 
@@ -35,7 +35,7 @@ This blog walks through the alternative approach, using your own infrastructure 
 
 Self-hosted runners are particularly useful for Windows apps, but the approach is the same for Linux. I dug into this when I was building out a Dockerized CI process for a client, and every build was taking 45 minutes...
 
-### Create a self-hosted runner
+## Create a self-hosted runner
 
 This is all surprisingly easy. You don't need any special ports open in your VM or a fixed IP address. The GitHub docs to create a self-hosted runner explain it all nicely, the approach is basically:
 
@@ -45,11 +45,12 @@ This is all surprisingly easy. You don't need any special ports open in your VM 
 
 In the _Settings...Actions_ section of your repo on GitHub you'll find the option to add a runner. GitHub supports cross-platform runners, so you can deploy to Windows or macOS on Intel, and Linux on Intel or Arm:
 
-![](/content/images/2021/01/add-runner.png)
+![GitHub Actions self-hosted runner configuration screen showing download and setup instructions](/content/images/2021/01/add-runner.png)
+{: alt="GitHub Actions repository settings page showing self-hosted runner configuration with download commands for Windows, macOS, and Linux platforms"}
 
 That's all straightforward, but you don't want a VM running 24x7 to provide a CI service you'll only use when code gets pushed, so here's the good part: **you'll start and stop your VM as part of the GitHub workflow**.
 
-### Managing the VM in the workflow
+## Managing the VM in the workflow
 
 My self-hosted runner is an Azure VM. In Azure you only pay for the compute when your VM is running, and you can easily start and stop VMs with `az`, the [Azure command line](https://docs.microsoft.com/en-us/cli/azure/):
 
@@ -130,12 +131,14 @@ a scheduled trigger so the build runs every day. **You should definitely do this
 
 the build job won't be queued until the start-runner job has finished. It will stay queued until your runner comes online - even if it takes a minute or so for the runner daemon to start. As soon as the runner starts, the build step runs.
 
-### Improvement and cost
+## Improvement and cost
 
 This build was for a Windows app that uses the graphics subsystem so it needs the [full Windows Docker image](https://hub.docker.com/_/microsoft-windows). That's a big one, so the jobs were taking 45-60 minutes to run every time - no performance advantage from all my best-practice Dockerfile optimization.
 
 With the self-hosted runner, repeat builds take 9-10 minutes. Starting the VM takes 1-2 minutes, and the build stage takes around 5 minutes. If we run 10 builds a day, we'll only be billed for 1 hour of VM compute time.
 
 Your mileage may vary.
+
+> Looking to optimize your Docker workflows further? Check out my guide on [Dockerizing .NET Apps with Microsoft's Build Images](/dockerizing-net-apps-with-microsofts-build-images-on-docker-hub/) or explore more [Docker and DevOps content](/tags/#devops).
 
 <!--kg-card-end: markdown-->

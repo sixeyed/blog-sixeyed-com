@@ -5,7 +5,7 @@ tags:
 - tracing
 - opentelemetry
 - dotnet
-description: Distributed tracing isn't just for internal processes. Part 1 of a series using OpenTelemetry to record traces for workflows in an external system.
+description: Learn how to implement distributed tracing for external processes using Akka.NET and OpenTelemetry. Complete code walkthrough with practical examples for monitoring workflows in .NET applications.
 header:
   teaser: /content/images/2024/07/workflow-1-tempo.png
 ---
@@ -19,7 +19,8 @@ The system is a risk calculation engine. It has a REST API where you submit work
 
 I wanted to capture the stages of processing as a tracing graph, so we could build a dashboard with a list of completed processes, and drill down into the details for each. Something like the classic Jaeger view:
 
-![](/content/images/2024/07/workflow-1-sketch.jpeg)
+![Architectural sketch showing distributed tracing workflow with Akka.NET actors](/content/images/2024/07/workflow-1-sketch.jpeg)
+{: alt="Architectural sketch showing distributed tracing workflow with Akka.NET actors"}
 
 ## Terminology
 
@@ -52,7 +53,8 @@ I've published a full code sample on GitHub here if you want to see how it all f
 
 Towards the end of processing, each Workflow monitor actor has had three Entity monitor actors, one for each stage. The Workflow owns the overall trace, and in this example the spans for Data Loader and Processor would be complete, and the span for Output Generator would still be running:
 
-![](/content/images/2024/07/workflow-1-erd.png)
+![Entity relationship diagram showing workflow monitor actor structure](/content/images/2024/07/workflow-1-erd.png)
+{: alt="Entity relationship diagram showing workflow monitor actor structure"}
 
 ## Interesting Bits of Code
 
@@ -143,7 +145,8 @@ Context.Parent.Tell(ended, Self);
 
 And when all the Entities are done and the whole Workflow is finished, the parent Activity is ended which completes the trace and sends it on to the exporters. In the sample code I've configured the [console exporter](https://github.com/open-telemetry/opentelemetry-dotnet/blob/main/src/OpenTelemetry.Exporter.Console/README.md) so traces get published as logs, and the [OTLP exporter](https://github.com/open-telemetry/opentelemetry-dotnet/blob/main/src/OpenTelemetry.Exporter.OpenTelemetryProtocol/README.md) to send the traces to a real collector so you can visualize them:
 
-![](/content/images/2024/07/workflow-1-tempo.png)
+![Tempo trace visualization showing workflow stages and timing in Grafana](/content/images/2024/07/workflow-1-tempo.png)
+{: alt="Tempo trace visualization showing workflow stages and timing in Grafana"}
 
-In the next post I'll show you how to run the sample app with Docker containers, collecting the traces with [Tempo](https://grafana.com/oss/tempo/) and exploring them with [Grafana](https://grafana.com/oss/grafana/).
+Continue reading in [Part 2: Running the Demo](/tracing-external-processes-with-akka-net-and-opentelemetry-part-2-running-the-demo/) where I'll show you how to run the sample app with Docker containers, collecting the traces with [Tempo](https://grafana.com/oss/tempo/) and exploring them with [Grafana](https://grafana.com/oss/grafana/).
 
