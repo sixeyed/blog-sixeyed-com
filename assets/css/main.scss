@@ -334,9 +334,10 @@ $right-sidebar-width-wide: 300px !default;
 }
 
 .top-ad-bar {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
+    display: none; /* Hidden but code remains in repo */
+    /* display: flex; */
+    /* flex-grow: 1; */
+    /* justify-content: center; */
 }
 
 .author__avatar {
