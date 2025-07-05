@@ -23,8 +23,14 @@ if (!(Test-Path $redirectsFile)) {
 $content = Get-Content $redirectsFile -Raw
 $inRedirects = $false
 $redirects = @()
+$defaultUrl = ""
 
 foreach ($line in $content -split "`n") {
+    if ($line -match "^default_url:\s*(.+)") {
+        $defaultUrl = $matches[1].Trim()
+        continue
+    }
+    
     if ($line -match "^redirects:") {
         $inRedirects = $true
         continue
@@ -61,10 +67,13 @@ Write-Host "Found $($redirects.Count) redirects to generate" -ForegroundColor Cy
 foreach ($redirect in $redirects) {
     $filePath = "l/$($redirect.slug).html"
     
+    # Use default URL if redirect URL is empty
+    $redirectUrl = if ([string]::IsNullOrWhiteSpace($redirect.url)) { $defaultUrl } else { $redirect.url }
+    
     $content = @"
 ---
 layout: redirect
-redirect_to: $($redirect.url)
+redirect_to: $redirectUrl
 permalink: /l/$($redirect.slug)/
 sitemap: false
 ---

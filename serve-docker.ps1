@@ -76,7 +76,8 @@ $jekyllCmd = @("jekyll", "serve", "--host", "0.0.0.0", "--livereload", "--livere
 
 if ($Drafts) {
     $jekyllCmd += "--drafts"
-    Write-Host "📝 Including draft posts" -ForegroundColor Yellow
+    $jekyllCmd += "--future"
+    Write-Host "📝 Including draft posts (including future-dated)" -ForegroundColor Yellow
 }
 
 $dockerArgs += $jekyllCmd

@@ -1,6 +1,6 @@
 ---
 title: 'An Evening with Claude Code  - or - How I Learned to Stop Worrying and Love AI'
-date: '2025-07-06 10:00:00'
+date: '2025-06-05 10:00:00'
 tags:
 - ai
 - claude
@@ -8,7 +8,7 @@ tags:
 - development
 description: One evening running three parallel development projects with Claude Code - building a client POC, creating course demos, and fixing blog UI issues simultaneously. AI isn't replacing developers, it's transforming us into conductors of multiple AI workers.
 header:
-  teaser: /content/images/2025/07/claude-parallel-development.png
+  teaser: /content/images/2025/07/claude-multi-cloud.png
 ---
 
 It's 7pm, Friday night and I'm working on three different projects simultaneously with my new favorite colleague: [Claude Code](https://www.anthropic.com/claude-code). 
