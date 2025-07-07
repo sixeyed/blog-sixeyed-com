@@ -1,6 +1,6 @@
 ---
 title: '10 Essential Claude Code Tips: Boost Your AI Coding Productivity in 2025'
-date: '2025-07-13 10:00:00'
+date: '2025-07-15 10:00:00'
 tags:
 - ai
 - claude
@@ -36,7 +36,7 @@ Setting up is straightforward: [create a free account](https://claude.ai/login),
 
 > I used Claude Code to build an entire [multi-cloud AKS/EKS demo application](https://github.com/sixeyed/multi-cloud-demo). With a few hours of guidance, Claude completed what would have taken me at least 3 days to write myself.
 
-## 1. Multitask Like a Manager
+## 1. Run Multiple Claude Instances: Multitask Like a Manager
 
 Run multiple Claude instances across different terminal windows. While one's building your API endpoints, another can work on the frontend, and a third can write your deployment scripts. Switch between them to provide guidance - it's like having a team of developers who are extremely eager and who know _everything_.
 
@@ -45,39 +45,39 @@ Make sure you have plenty of things on the go - work, pet projects, blogs, tech 
 It's the new ABC: **Always Be Clauding**.
 {: .notice--info}
 
-## 2. Let Claude Do the Work
+## 2. Delegate Debugging: Let Claude Do the Work
 
 When something's broken, resist the urge to fix it yourself. That's not why you're here. Describe the problem and let Claude handle the implementation. If you're diving into the code to make changes, you're going too deep. Stay at the design level where you add the most value.
 
 Claude will use all the same debugging tools you use to find issues (it asks permission first and stores the permissions you've granted). If you see an error log, just give it to Claude and it will use `kubectl` to examine your Pods and Services, `curl` to test endpoints, `nslookup` for DNS queries and so on. 
 
-## 3. Roll With It
+## 3. Code Review Mindset: Roll With AI-Generated Code
 
 Claude's code isn't going to look like yours. That's fine. Treat it like you're reviewing someone's PR - does it meet the requirements? Is it maintainable? If you have standards, enforce them in the repo. Don't get hung up on style differences. The goal is working software, not perfect alignment with your personal preferences.
 
-## 4. Design on the Fly
+## 4. Rapid Prototyping: Design and Iterate on the Fly
 
 Coding is cheap now. Really cheap. Need to refactor the entire architecture? Just ask. Want to switch from REST to GraphQL? Claude can handle it. Don't overthink the initial design - build something that works, then iterate. It's liberating when a complete redesign takes minutes, not days.
 
-## 5. Stay in Control of Commits
+## 5. Git Best Practices: Stay in Control of Commits
 
 Claude can commit code and write commit messages, but don't let it run on autopilot. Review the diffs, commit frequently, and keep your Git history clean. You want to understand what's changing - that's how you maintain ownership of the codebase.
 
 Ready to try this? [Start with Claude Code free](https://www.anthropic.com/claude-code) and experience the power of AI-assisted development.
 
-## 6. Let Claude Do All the Things
+## 6. Beyond Application Code: Let Claude Handle Infrastructure
 
 Don't just use it for application code. Claude can write your [Dockerfiles](/learn-docker-in-a-month-of-lunches/), [Kubernetes](/learn-kubernetes-in-a-month-of-lunches/) manifests, [Terraform](https://www.terraform.io/) configs, CI/CD pipelines, test suites, documentation, architecture, tech stack. Push the boundaries - you'll be surprised at what it can do. It has memorized the entire Internet, after all (probably).
 
-## 7. Be Persistent
+## 7. Troubleshooting Complex Tasks: Be Persistent
 
 Some tasks are harder for Claude than others. I've had situations where it took a dozen prompts to get a local LGTM stack running, or to authenticate to a new EKS cluster. When it struggles, approach from different angles. Rephrase your requirements, break complex tasks into steps, feed in error messages, or provide examples. Like any team member, Claude sometimes needs extra guidance to get unstuck.
 
-## 8. Provide Context Upfront
+## 8. CLAUDE.md Best Practices: Provide Context Upfront
 
 Create a [`CLAUDE.md` file](https://docs.anthropic.com/en/docs/claude-code/memory) in your project root. This is where you document everything Claude needs to know - architecture decisions, tech stack, naming conventions, project structure, and coding standards. Claude Code automatically reads this file, so you don't need to repeat yourself. 
 
-A good `CLAUDE.md` is like a comprehensive onboarding doc for a new developer - and you can ask Claude to update it at the end of a session with new learnings, which it will pick up next time. Here's what it looks like - create it with the `/init` command when you bring Clkaude onto the project and keep it current with prompts:
+A good `CLAUDE.md` is like a comprehensive onboarding doc for a new developer - and you can ask Claude to update it at the end of a session with new learnings, which it will pick up next time. Here's what it looks like - create it with the `/init` command when you bring Claude onto the project and keep it current with prompts:
 
 ```
 # CLAUDE.md - AI Assistant Memory File
@@ -95,11 +95,11 @@ This is a multi-cloud Kubernetes demo application showcasing how containerized .
   - Antiforgery tokens disabled for demo simplicity
 ```
 
-## 9. Batch Your Changes
+## 9. Async Work Queue: Batch Your Changes
 
-While Claude is working on a longer task, queue up your next prompts. If you know you'll need API tests after the endpoints are done, type that prompt and hit enter - Claude will pick it up when ready. This keeps Claude productive while you check on your other instances. It's like having an async work queue that you can fill ahead of time.
+While Claude is working on a longer task, queue up your next prompts. If you know you'll need API tests after the endpoints are done, type that prompt and hit enter - Claude will pick it up when ready. This keeps Claude productive while you check on your other instances. It's like having a queue of work that you can fill ahead of time.
 
-## 10. Capture the Prompts
+## 10. Knowledge Management: Capture and Reuse Prompts
 
 Ask Claude to dump all the prompts from your session to a text file in the repo. It's incredibly useful to see how the development evolved - what worked, what needed clarification, how you refined requirements. These prompt histories become scaffolding for your next similar project. You'll build up a library of effective prompts that you can reuse and adapt.
 
