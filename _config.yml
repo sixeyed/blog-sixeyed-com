@@ -35,6 +35,10 @@ atom_feed:
 feed:
   path: /rss
 
+# Custom JavaScript
+footer_scripts:
+  - /assets/js/external-links.js
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes

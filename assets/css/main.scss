@@ -400,3 +400,15 @@ html {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+/* External links and redirects visual indicator */
+.page__content a[href^="http"]:not([href*="blog.sixeyed.com"]),
+.page__content a[href^="https"]:not([href*="blog.sixeyed.com"]),
+.page__content a[href^="/l/"] {
+  &::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin-left: 0.2em;
+  }
+}

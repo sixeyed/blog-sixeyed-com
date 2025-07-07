@@ -38,9 +38,12 @@ Setting up is straightforward: [create a free account](https://claude.ai/login),
 
 ## 1. Multitask Like a Manager
 
-Run multiple Claude instances across different terminal windows. While one's building your API endpoints, another can work on the frontend, and a third can write your deployment scripts. Switch between them to provide guidance - it's like having a team of developers who are extremely eager and who know everything.
+Run multiple Claude instances across different terminal windows. While one's building your API endpoints, another can work on the frontend, and a third can write your deployment scripts. Switch between them to provide guidance - it's like having a team of developers who are extremely eager and who know _everything_.
 
-Make sure you have plenty of things on the go - work, pet projects, blogs, tech explorations. It's the new ABC: **Always Be Clauding**.
+Make sure you have plenty of things on the go - work, pet projects, blogs, tech explorations. 
+
+It's the new ABC: **Always Be Clauding**.
+{: .notice--info}
 
 ## 2. Let Claude Do the Work
 
@@ -64,7 +67,7 @@ Ready to try this? [Start with Claude Code free](https://www.anthropic.com/claud
 
 ## 6. Let Claude Do All the Things
 
-Don't just use it for application code. Claude can write your [Dockerfiles](/learn-docker-in-a-month-of-lunches/), [Kubernetes](/learn-kubernetes-in-a-month-of-lunches/) manifests, [Terraform](https://www.terraform.io/) configs, CI/CD pipelines, test suites, and documentation. Push the boundaries - you'll be surprised at what it can do. It has memorized the entire Internet, after all.
+Don't just use it for application code. Claude can write your [Dockerfiles](/learn-docker-in-a-month-of-lunches/), [Kubernetes](/learn-kubernetes-in-a-month-of-lunches/) manifests, [Terraform](https://www.terraform.io/) configs, CI/CD pipelines, test suites, documentation, architecture, tech stack. Push the boundaries - you'll be surprised at what it can do. It has memorized the entire Internet, after all (probably).
 
 ## 7. Be Persistent
 
@@ -74,7 +77,7 @@ Some tasks are harder for Claude than others. I've had situations where it took 
 
 Create a [`CLAUDE.md` file](https://docs.anthropic.com/en/docs/claude-code/memory) in your project root. This is where you document everything Claude needs to know - architecture decisions, tech stack, naming conventions, project structure, and coding standards. Claude Code automatically reads this file, so you don't need to repeat yourself. 
 
-A good `CLAUDE.md` is like a comprehensive onboarding doc for a new developer - and you can ask Claude to update it at the end of a session with new learnings, which it will pick up next time. Here's what it looks like - create it with the `/init` command and keep it current with prompts:
+A good `CLAUDE.md` is like a comprehensive onboarding doc for a new developer - and you can ask Claude to update it at the end of a session with new learnings, which it will pick up next time. Here's what it looks like - create it with the `/init` command when you bring Clkaude onto the project and keep it current with prompts:
 
 ```
 # CLAUDE.md - AI Assistant Memory File
