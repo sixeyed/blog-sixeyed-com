@@ -280,3 +280,147 @@ The blog uses the Minimal Mistakes theme. Customizations are made through:
 - Reference images using absolute paths: `/content/images/2024/07/image.png`
 - Include teaser images in front matter
 - Use code blocks with syntax highlighting for all technical examples
+
+## Recent Content Optimizations (2025-07)
+
+### Custom Styling for Text Wrapping
+**Problem Solved**: Code blocks containing long text prompts were causing horizontal scrolling, making them hard to read on mobile.
+
+**Solution Implemented**: Created a custom `.prompt-wrap` CSS class in `assets/css/main.scss`:
+```css
+.prompt-wrap {
+  background-color: #f8f8f8;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 1em 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+```
+
+**Usage**: Wrap long text content (like AI prompts or conversational examples) in `<div class="prompt-wrap">content</div>` instead of markdown code blocks to ensure proper text wrapping.
+
+### Content Enhancement Workflow
+**SEO Optimization Process**:
+1. **Alt Text**: Add descriptive alt text to all images (150+ characters recommended)
+2. **Meta Descriptions**: Update to match content changes (conductor → director metaphor updates)
+3. **Spelling Check**: Run comprehensive spell check, common issues found:
+   - "knowledgable" → "knowledgeable"
+   - "prduct" → "product" 
+   - "Clkaude" → "Claude"
+   - Possessive "it's" vs "its"
+4. **Heading Enhancement**: Add targeted keywords to H2 headings for better SEO
+   - Example: "Multitask Like a Manager" → "Run Multiple Claude Instances: Multitask Like a Manager"
+5. **Internal Linking**: Use Jekyll permalink format without dates: `/post-slug/` not `/2025/07/10/post-slug/`
+
+### Content Publishing Workflow
+**Draft to Publication Process**:
+1. Content creation and revisions in `_drafts/filename.markdown`
+2. SEO optimization (alt text, meta descriptions, spell check)
+3. Final review and date update in frontmatter
+4. Move to `_posts/YYYY-MM-DD-filename.markdown` for publication
+5. Update CLAUDE.md with any new learnings or patterns
+
+### AI-Related Content Best Practices
+**For Claude Code/AI Development Posts**:
+- Use emojis strategically at the beginning of sentences for visual interest
+- Include practical examples from real projects
+- Balance technical depth with accessibility
+- Add FAQ sections for long-tail keyword targeting
+- Link to official documentation (Anthropic, Claude Code docs)
+- Include both free and paid tier information for tools
+- Use "director" metaphor over "conductor" for AI development management
+
+## External Links and User Experience (January 2025)
+
+### Link Behavior Configuration
+**Problem**: External links and redirects opened in the same tab, causing readers to navigate away from blog posts.
+
+**Solution Implemented**: Added automatic new-tab opening for external links and redirects:
+
+**CSS Visual Indicators** (`assets/css/main.scss`):
+```css
+/* External links and redirects visual indicator */
+.page__content a[href^="http"]:not([href*="blog.sixeyed.com"]),
+.page__content a[href^="https"]:not([href*="blog.sixeyed.com"]),
+.page__content a[href^="/l/"] {
+  &::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin-left: 0.2em;
+  }
+}
+```
+
+**JavaScript Implementation** (`assets/js/external-links.js`):
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+  const externalLinks = document.querySelectorAll('.page__content a[href^="http"]:not([href*="blog.sixeyed.com"]), .page__content a[href^="https"]:not([href*="blog.sixeyed.com"]), .page__content a[href^="/l/"]');
+  
+  externalLinks.forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+});
+```
+
+**Configuration** (`_config.yml`):
+```yaml
+footer_scripts:
+  - /assets/js/external-links.js
+```
+
+### Link Categories
+**Opens in New Tab**:
+- External HTTP/HTTPS links (Claude Code, GitHub, etc.)
+- `/l/` redirect links (Pluralsight, book links, etc.)
+- Shows ↗ visual indicator
+
+**Stays in Same Tab**:
+- Internal blog post links
+- Links within blog.sixeyed.com domain
+
+### Benefits
+- Improved user experience: readers don't lose their place
+- Better engagement: blog posts stay open
+- Clear visual feedback: users know when they're leaving the site
+- Security: `noopener noreferrer` prevents potential security issues
+
+## Hero Image Optimization (January 2025)
+
+### Hero Image Display Fix
+**Problem**: Hero images in individual posts were being cropped vertically with `object-fit: cover`, forcing images to fill container horizontally.
+
+**Solution**: Updated CSS to preserve aspect ratio and only resize when necessary:
+
+```scss
+.page__hero-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;  // Changed from 'cover'
+  display: block;
+  margin: 0 auto;
+}
+
+.page__hero {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;  // Center smaller images
+  // Removed: overflow: hidden (was causing cropping)
+}
+```
+
+### Image Behavior
+- **Small Images**: Display at natural size, centered
+- **Large Images**: Scale down proportionally to fit container
+- **Aspect Ratio**: Always preserved, never cropped
+- **Responsive**: Adjusts gracefully on mobile devices
+
+This ensures hero images look as intended without unwanted cropping.
