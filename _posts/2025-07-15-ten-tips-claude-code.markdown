@@ -40,7 +40,7 @@ Setting up is straightforward: [create a free account](https://claude.ai/login),
 
 Run multiple Claude instances across different terminal windows. While one's building your API endpoints, another can work on the frontend, and a third can write your deployment scripts. Switch between them to provide guidance - it's like having a team of developers who are extremely eager and who know _everything_.
 
-Make sure you have plenty of things on the go - work, pet projects, blogs, tech explorations. 
+Make sure you have plenty of things on the go - work, pet projects, blogs, tech explorations. And don't be afraid to let it loop - prompts like "keep iterating on the build: fix any issues with the terraform config and deployment scripts, push changes, run the pipeline with the gh command, watch the outcome and repeat" will keep Claude busy. 
 
 It's the new ABC: **Always Be Clauding**.
 {: .notice--info}
