@@ -1,6 +1,6 @@
 ---
 title: 'An Evening with Claude Code  - or - How I Learned to Stop Worrying and Love AI'
-date: '2025-07-10 10:00:00'
+date: '2025-07-10 09:00:00'
 tags:
 - ai
 - claude
