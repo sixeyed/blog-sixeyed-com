@@ -38,7 +38,7 @@ Setting up is straightforward: [create a free account](https://claude.ai/login),
 
 ## 1. Run Multiple Claude Instances: Multitask Like a Manager
 
-Run multiple Claude instances across different terminal windows. While one's building your API endpoints, another can work on the frontend, and a third can write your deployment scripts. Switch between them to provide guidance - it's like having a team of developers who are extremely eager and who know _everything_.
+Run multiple Claude instances across different terminal sessions. While one's building your API endpoints, another can work on the frontend, and a third can write your deployment scripts. Switch between them to provide guidance - it's like having a team of developers who are extremely eager and who know _everything_.
 
 Make sure you have plenty of things on the go - work, pet projects, blogs, tech explorations. And don't be afraid to let it loop - prompts like "keep iterating on the build: fix any issues with the terraform config and deployment scripts, run the script, watch the outcome and repeat until it works" will keep Claude busy. 
 
@@ -53,7 +53,7 @@ Claude will use all the same debugging tools you use to find issues (it asks per
 
 ## 3. Code Review Mindset: Roll With AI-Generated Code
 
-Claude's code isn't going to look like yours. That's fine. Treat it like you're reviewing someone's PR - does it meet the requirements? Is it maintainable? If you have standards, enforce them in the repo. Don't get hung up on style differences. The goal is working software, not perfect alignment with your personal preferences.
+Claude's code isn't going to look like yours. That's fine. Treat it like you're reviewing someone's PR - does it meet the requirements? Is it maintainable? If you have standards, enforce them in the repo. Don't get hung up on style differences. The goal is working software, not perfect alignment with your own preferences.
 
 ## 4. Rapid Prototyping: Design and Iterate on the Fly
 
@@ -67,15 +67,17 @@ Ready to try this? [Start with Claude Code free](https://www.anthropic.com/claud
 
 ## 6. Beyond Application Code: Let Claude Handle Infrastructure
 
-Don't just use it for application code. Claude can write your [Dockerfiles](/learn-docker-in-a-month-of-lunches/), [Kubernetes](/learn-kubernetes-in-a-month-of-lunches/) manifests, [Terraform](https://www.terraform.io/) configs, CI/CD pipelines, test suites, documentation, architecture, tech stack. Push the boundaries - you'll be surprised at what it can do. It has memorized the entire Internet, after all (probably).
+Don't just use it for application code. Claude can write your [Dockerfiles](/learn-docker-in-a-month-of-lunches/), [Kubernetes](/learn-kubernetes-in-a-month-of-lunches/) manifests, [Terraform](https://www.terraform.io/) configs, CI/CD pipelines, test suites, documentation. It will even give you guidance on architecture and tech stack. Push the boundaries - you'll be surprised at what it can do. It has memorized the entire Internet, after all (probably).
 
 ## 7. Troubleshooting Complex Tasks: Be Persistent
 
-Some tasks are harder for Claude than others. I've had situations where it took a dozen prompts to get a local LGTM stack running, or to authenticate to a new EKS cluster. When it struggles, approach from different angles. Rephrase your requirements, break complex tasks into steps, feed in error messages, or provide examples. Like any team member, Claude sometimes needs extra guidance to get unstuck.
+Some tasks are harder for Claude than others. I've had situations where it took a dozen prompts to get a local LGTM stack running, or to authenticate to a new EKS cluster. When it struggles, approach from different angles. Rephrase your requirements, break complex tasks into steps, feed in error messages, or provide examples.  Like any team member, Claude sometimes needs extra guidance to get unstuck. 
+
+Unlike most team members, Claude sometimes gives up. It will say something like "success! I've got it all working except the things you really wanted". But that doesn't mean it can't do it, it's just reached the end of the road for that prompt - try again.
 
 ## 8. CLAUDE.md Best Practices: Provide Context Upfront
 
-Create a [`CLAUDE.md` file](https://docs.anthropic.com/en/docs/claude-code/memory) in your project root. This is where you document everything Claude needs to know - architecture decisions, tech stack, naming conventions, project structure, and coding standards. Claude Code automatically reads this file, so you don't need to repeat yourself. 
+Create a [`CLAUDE.md` file](https://docs.anthropic.com/en/docs/claude-code/memory) in your project root. This is where Claude documents everything it needs to know - architecture decisions, tech preferences, naming conventions, project structure, and coding standards. Claude Code automatically reads this at the start of each session, so you don't need to repeat yourself. 
 
 A good `CLAUDE.md` is like a comprehensive onboarding doc for a new developer - and you can ask Claude to update it at the end of a session with new learnings, which it will pick up next time. Here's what it looks like - create it with the `/init` command when you bring Claude onto the project and keep it current with prompts:
 
@@ -103,21 +105,19 @@ While Claude is working on a longer task, queue up your next prompts. If you kno
 
 Ask Claude to dump all the prompts from your session to a text file in the repo. It's incredibly useful to see how the development evolved - what worked, what needed clarification, how you refined requirements. These prompt histories become scaffolding for your next similar project. You'll build up a library of effective prompts that you can reuse and adapt.
 
-Share your Claude Code productivity tips in the comments below - what workflows have you discovered that boost your development speed?
-
 
 ## Claude Code Pricing and Usage Limits
 
 Don't get too hung up on the details - which model you're using or which plan you're on. I use the more advanced [Opus 4 model](https://docs.anthropic.com/en/docs/claude-code/settings#model-selection) by default, but Claude automatically switches to Sonnet 4 when you're running low on credits, and it's perfectly capable. 
 
-The [usage restrictions](https://docs.anthropic.com/en/docs/claude-code/costs) are very fair - when you hit the limits, they reset after a period. More expensive plans have bigger limits and shorter reset periods. Just focus on being productive with whatever you have.
+The [usage restrictions](https://docs.anthropic.com/en/docs/claude-code/costs) are very fair - when you hit the limits, they reset after a period. More expensive plans have higher limits and shorter reset periods. Just focus on being productive with whatever you have.
 
 ## Frequently Asked Questions
 
 **Q: Is Claude Code free to use?**  
 A: Claude Code offers a free tier with limited usage. Paid plans provide higher limits and access to more powerful models like Opus 4.
 
-**Q: Does Claude Code work with languages other than JavaScript?**  
+**Q: Does Claude Code work with any language?**  
 A: Yes! Claude Code supports all major programming languages including Python, Java, C#, Go, Rust, and more.
 
 **Q: Can Claude Code work with existing codebases?**  
@@ -133,6 +133,6 @@ A: Yes, but always review Claude's code thoroughly. Treat it like any code revie
 
 Claude Code fundamentally changes how we write software. Instead of coding, you're directing. Instead of debugging syntax, you're validating solutions. Embrace this new way of working - you will suddenly become hugely more productive.
 
-I imagine the next step will be a higher level still - you'll plug Claude into your product backlog and set X number of instances running to do the entire project. One Claude will test and review the work of another Claude, and maybe there will be a manager Claude who takes over the director role. 
+I imagine the next step will be a higher level still - you'll plug Claude into your product backlog and set X number of instances running to do the entire project. One Claude will test and review the work of another Claude, and maybe there will be a manager (the Claude of Claudes) who takes over the director role. 
 
 But for now, you are the director. If you're ready to transform your development workflow, [get started with Claude Code](https://www.anthropic.com/claude-code) and experience the future of AI-powered coding. For a more detailed analysis of what multiple Claudes can do, check out my post [An Evening with Claude Code - or - How I Learned to Stop Worrying and Love AI](/claude-is-coming-for-your-job/).
