@@ -1,6 +1,6 @@
 ---
 title: '10 Essential Claude Code Tips: Boost Your AI Coding Productivity in 2025'
-date: '2025-07-15 10:00:00'
+date: '2025-07-15 09:00:00'
 tags:
 - ai
 - claude
