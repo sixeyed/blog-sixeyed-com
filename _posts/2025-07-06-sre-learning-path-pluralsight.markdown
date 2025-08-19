@@ -28,9 +28,9 @@ I cover the easy(ish) way to add reliability at scale with container orchestrati
 
 The complete [Site Reliability Engineering learning path](/l/ps-sre-path) takes you from SRE fundamentals through to advanced practices:
 
-1. [SRE: Concepts and Principles](https://www.pluralsight.com/courses/sre-concepts-principles)
-2. [SRE: Monitoring and Observability](https://www.pluralsight.com/courses/sre-monitoring-observability)
-3. SRE: Resiliency and Automation _(coming soon)_
+1. [SRE: Concepts and Principles](/l/ps-sre-concepts)
+2. [SRE: Monitoring and Observability](/l/ps-sre-monitoring)
+3. [SRE: Resiliency and Automation](/l/ps-sre-resiliency)
 4. SRE: Measuring and Optimizing Reliability _(coming soon)_
 
 Let's dive into what's covered in the first two courses.

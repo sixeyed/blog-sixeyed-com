@@ -30,6 +30,10 @@ redirects:
     url: https://www.pluralsight.com/courses/sre-monitoring-observability
     description: SRE Monitoring and Observability course
     
+  - slug: ps-sre-resiliency
+    url: https://www.pluralsight.com/courses/sre-resiliency-automation
+    description: SRE Resiliency and Automation course
+    
   # Books
   - slug: docker-book
     url: https://www.manning.com/books/learn-docker-in-a-month-of-lunches
