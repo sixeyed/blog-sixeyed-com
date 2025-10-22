@@ -13,7 +13,10 @@ header:
 
 # Why Would You Write a Book About Docker in 2025?
 
-Docker is everywhere. It's the default way to package and run applications. Every cloud platform supports it, every CI/CD pipeline uses it, and pretty much every development team has adopted or is adopting it. So why did I write a second edition of [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches-second-edition)?
+Docker is everywhere. It's the most sensible way to package and run applications. Every cloud platform supports it, every CI/CD pipeline uses it, any laptop can run it, and pretty much every development team has adopted or is adopting it. 
+
+So why did I write a second edition of [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches-second-edition)?
+{: .notice--info}
 
 This is why: most engineers learn Docker on the job. You need to containerize an app, so you cobble together a Dockerfile from Stack Overflow. You need to run multiple containers, so you get Claude to write you a Docker Compose file. It works, you ship it, and you move on. But that doesn't get you an understanding of how Docker works or what it can do.
 
@@ -24,12 +27,13 @@ I've trained hundreds of people on Docker and Kubernetes, and there's a common p
 You might know how to `docker build` and `docker run`, but do you really understand Docker volumes and why data in containers isn't permanent? Can you configure application settings across different environments without rebuilding images? Do you know how containers enable advanced patterns like HTTP traffic management with reverse proxies or asynchronous messaging with queues?
 
 ![Async messaging with containers](/content/images/2025/10/diamol-async.png)
+{: alt="Diagram showing asynchronous messaging architecture using Docker containers with message queues connecting multiple services for event-driven communication patterns"}
 
-Learn Docker in a Month of Lunches (Second Edition) has got you covered. It walks you through Docker with a practical hands-on approach, giving you experience in everthing from the fundamentals to image optimization and cross-platform delivery. But you don't have to follow the journey - every chapter is independent. Already comfortable with basic Dockerfiles? Jump straight to Chapter 17 on optimizing images for size, speed, and security. Need to understand networking? Chapter 7 walks through Docker Compose and how Docker plugs containers together. Want to finally master volumes on Windows AND Linux? Chapter 6 has you covered.
+Learn Docker in a Month of Lunches (Second Edition) has got you covered. It walks you through Docker with a practical hands-on approach, giving you experience in everything from the fundamentals to image optimization and cross-platform delivery. But you don't have to follow the journey - every chapter is independent. Already comfortable with basic Dockerfiles? Jump straight to Chapter 17 on optimizing images for size, speed, and security. Need to understand networking? Chapter 7 walks through Docker Compose and how Docker plugs containers together. Want to finally master volumes on Windows AND Linux? Chapter 6 has you covered.
 
 ## What's New in the Second Edition
 
-The first edition camoe out in 2021, and although the core concepts haven't changed the book content is new with every exercise rewritten and tested for the latest releaes. Everything works cross-platform: Linux, Windows, Intel, and ARM. You can follow along on your Apple Silicon, your Windows 11 laptop, or a Ubuntu server you're running in the cloud. There's a whole chapter on replatforming legacy Windows apps - because yes, those old .NET Framework applications deserve a new home in containers.
+The first edition came out in 2021, and although the core concepts haven't changed the book content is new with every exercise rewritten and tested for the latest releases. Everything works cross-platform: Linux, Windows, Intel, and ARM. You can follow along on your Apple Silicon, your Windows 11 laptop, or a Ubuntu server you're running in the cloud. There's a whole chapter on replatforming legacy Windows apps - because yes, those old .NET Framework applications deserve a new home in containers.
 
 The runtime chapters of the book are a complete refresh, covering all the options you have to run containers in production. Azure Container Apps and Google Cloud Run for serverless containers in the cloud, a primer on Kubernetes, and GitHub Actions for CI/CD.
 
@@ -42,6 +46,7 @@ Part 2 gets into the real-world stuff: running distributed applications with Doc
 Part 3 shows you how to run containers anywhere - multi-platform builds that work on ARM and Intel, managed container services in Azure and Google Cloud, and yes, Kubernetes. 
 
 ![A multi-platform Kubernetes cluster](/content/images/2025/10/diamol-k8s-cluster.png)
+{: alt="Screenshot of a Kubernetes cluster running on multiple platforms including ARM and Intel architectures with Linux and Windows nodes deployed across different cloud environments"}
 
 Part 4 is where it gets really interesting - production patterns like configuration management, centralized logging, reverse proxies for traffic control, and message queues for asynchronous communication. 
 
