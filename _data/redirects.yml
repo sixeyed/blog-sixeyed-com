@@ -60,7 +60,11 @@ redirects:
   - slug: linkedin
     url: https://www.linkedin.com/in/eltonstoneman/
     description: LinkedIn profile
-    
+
+  - slug: amazon
+    url: https://www.amazon.com/stores/Elton-Stoneman/author/B0759TFV4F
+    description: Amazon author profile
+
   # Legacy redirects (replace pxf.io links)
   # Short code format pxf.io links - redirect to primary slugs
     
