@@ -198,37 +198,66 @@ The blog uses the Minimal Mistakes theme. Customizations are made through:
 - Maintain theme variables where possible
 - Comment liberally for future maintenance
 
-## SEO Best Practices
+## SEO and Discoverability
 
-### Meta Descriptions
-- **Required**: Every post must have a `description` in frontmatter
-- **Length**: 150-160 characters optimal
-- **Format**: Action-oriented, include primary keywords
-- **Example**: "Learn how to implement distributed tracing for external processes using Akka.NET and OpenTelemetry. Complete code walkthrough with practical examples."
+This section reflects search practice as of 2026. The short version: **write genuinely useful, experience-led content for humans and structure it so both Google and AI assistants can understand and cite it.** Keyword placement and density are not the game any more — topical relevance, search intent, demonstrated experience, and machine-readable structure are.
 
-### Image Optimization
-- **Alt Text**: Required for all images using Jekyll syntax:
+### The mental model (read this first)
+
+Two audiences now find these posts:
+
+1. **Search engines** — Google ranks on topical relevance, search intent, and E-E-A-T (Experience, Expertise, Authoritativeness, Trust). Since the Helpful Content updates (2022-24), keyword-stuffed or over-optimized content is actively *demoted*. BERT/MUM understand context, so you don't need to repeat exact keywords — you need to cover the topic well and match what the reader actually wants.
+2. **AI assistants** — Google AI Overviews, ChatGPT, Perplexity, and Claude increasingly answer questions by summarizing and citing pages. This is Generative Engine Optimization (GEO / AEO). To get cited, content must be *quotable*: self-contained claims, clear definitions, comparison tables, stats with sources, and direct Q&A.
+
+Optimize for both by being clear, concrete, accurate, and well-structured. There is no separate "SEO version" of a good technical post — the same qualities serve readers, Google, and LLMs.
+
+### E-E-A-T: lead with experience (Elton's biggest asset)
+
+Google added "Experience" to E-A-T in late 2022, and it's the single strongest lever this blog has. First-hand, been-there content outranks generic explainers.
+
+- Keep the first-person experience markers — "I was brought in to...", "in a client project...", "here's what actually happens in production". These are an SEO asset, not just voice.
+- Show real artifacts: actual commands, real output, screenshots, repos. Demonstrated experience > described experience.
+- Date-stamp time-sensitive claims ("at the time of writing", versions, dates) so freshness is legible.
+- The author profile and bio matter for authoritativeness — keep them current.
+
+### Search intent and topic coverage (replaces "keyword placement")
+
+- Decide what question/intent a post serves, and make sure it actually answers it — completely, in one place.
+- Use natural language a reader would actually search or ask. Cover the subtopics and related questions a curious reader would have next; that breadth is what signals topical authority.
+- Don't force keywords into headings or the first 100 words. Write the clearest heading for the reader; relevance follows naturally. Avoid the old "inject the keyword into every H2" tactic — it now reads as over-optimization.
+- Brand/product names: use the canonical spelling in prose (e.g. `Rocket.Chat`, `Node.js`). Search engines tokenize on the dot, so the canonical form already matches the spaced query ("rocket chat"). Get the exact spaced phrase into the meta description once, where it's low-stakes.
+
+### Titles and meta descriptions
+
+- **Title**: aim for roughly 60 characters / ~600px so it doesn't truncate in results, but Google measures pixel width and rewrites titles often, so treat this as a guide, not a rule. Lead with the hook or the clearest framing of the benefit; front-load what matters since the tail may be cut. The on-page `title:` and the URL slug are independent — a catchy title can pair with a keyword-rich slug.
+- **Description**: ~150-160 characters. It is **not a ranking factor** and Google rewrites most descriptions — write it for click-through (a clear, specific promise), not for rank. Still required in frontmatter for social/OG cards.
+- **Slug**: the URL comes from the filename (permalink is `/:title/`). Use a concise, descriptive, hyphenated slug with the core search phrase. This is where keyword intent lives, not the headline.
+
+### Structure for humans and machines
+
+- **Headings**: proper H2/H3 hierarchy, never skip levels. Each section should be a self-contained, skimmable unit — that's also what AI assistants extract and cite.
+- **Answer-first blocks**: for posts that target a question, put a direct, quotable answer near the top (a TL;DR / Quickstart works well), then expand. Self-contained paragraphs get cited; buried answers don't.
+- **Tables, lists, and definitions**: comparison tables and clear inline definitions are highly citable by LLMs and useful for readers. Use them where they fit naturally.
+- **FAQ sections**: a short FAQ targets long-tail and conversational queries and is ideal GEO fodder. Consider one for posts likely to be asked about in natural language.
+- **Internal linking**: link to related posts naturally in context (and between posts in a series). This spreads relevance and keeps readers on site.
+- **External links**: use the `/l/` redirect system for affiliate/tracked links (see Link Management). External links open in a new tab automatically.
+
+### Structured data
+
+- `{% seo %}` (jekyll-seo-tag) already emits the core Article JSON-LD, OpenGraph, and Twitter card metadata — make sure `title`, `description`, and `header.teaser` are set and it handles the rest.
+- For posts with a genuine FAQ section, FAQPage schema can earn rich results / AI citations. Add it only when the Q&A is real (Google penalizes fake FAQ markup).
+
+### Images, performance, and Core Web Vitals
+
+- **Alt text**: required on every content image, via the Jekyll attribute syntax. Write it to describe the image for a screen-reader user; that genuinely-descriptive text is what helps accessibility *and* image search:
   ```markdown
-  ![Description of image](/path/to/image.jpg)
-  {: alt="Detailed alt text for accessibility and SEO"}
+  ![Description of image](/path/to/image.png)
+  {: alt="Detailed, specific description of what the image shows"}
   ```
-- **Hero Images**: Use `header.teaser` in frontmatter
-- **File Names**: Descriptive, hyphenated (e.g., `workflow-tempo-trace.png`)
-
-### Title Optimization
-- **Length**: 50-60 characters ideal
-- **Structure**: Primary keyword near beginning
-- **Format**: Clear benefit or action (e.g., "How to..." or "Guide to...")
-
-### Internal Linking
-- **Related Posts**: Link between posts in series
-- **Context Links**: Reference other relevant posts naturally in content
-- **Redirect System**: Use `/l/` shortcuts for external links
-
-### Content Structure
-- **Headings**: Proper H2/H3 hierarchy (never skip levels)
-- **Keywords**: Natural placement in first 100 words
-- **Meta Info**: Consistent tags and categories
+- **File names**: descriptive and hyphenated (e.g. `workflow-tempo-trace.png`).
+- **Right-size images**: store images at sensible display dimensions (~1200-1600px wide is plenty for content/hero), not full camera/screenshot resolution. Oversized images hurt **LCP** (Largest Contentful Paint) and waste bandwidth. Resize before committing.
+- **Core Web Vitals** are a ranking/page-experience factor: **LCP** (load speed), **CLS** (layout shift — give images dimensions so the page doesn't jump), and **INP** (interaction responsiveness; replaced FID in March 2024). The theme handles most of this, but image sizing is the one thing post authors control directly.
+- **Hero/teaser**: set `header.teaser` in frontmatter; it drives the in-article hero and the social-share preview.
 
 ## Writing Style and Content Guidelines
 
@@ -307,15 +336,14 @@ The blog uses the Minimal Mistakes theme. Customizations are made through:
 
 ### Content Enhancement Workflow
 **SEO Optimization Process**:
-1. **Alt Text**: Add descriptive alt text to all images (150+ characters recommended)
+1. **Alt Text**: Add genuinely descriptive alt text to all images — describe what the image shows for a screen-reader user. Be specific, not padded to a character count.
 2. **Meta Descriptions**: Update to match content changes (conductor → director metaphor updates)
 3. **Spelling Check**: Run comprehensive spell check, common issues found:
    - "knowledgable" → "knowledgeable"
    - "prduct" → "product" 
    - "Clkaude" → "Claude"
    - Possessive "it's" vs "its"
-4. **Heading Enhancement**: Add targeted keywords to H2 headings for better SEO
-   - Example: "Multitask Like a Manager" → "Run Multiple Claude Instances: Multitask Like a Manager"
+4. **Headings**: Write the clearest heading for the reader. Do NOT inject keywords into every H2 — that's an over-optimization signal now (see SEO and Discoverability). A descriptive heading that matches the section's intent is enough. Only reword a heading if the original is genuinely unclear, not to fit a keyword.
 5. **Internal Linking**: Use Jekyll permalink format without dates: `/post-slug/` not `/2025/07/10/post-slug/`
 
 ### Content Publishing Workflow
