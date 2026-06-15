@@ -74,7 +74,7 @@ plugins:
 author:
   name   : "Elton Stoneman"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Freelance consultant and trainer. 15x Microsoft MVP. Pluralsight Author. Manning Author."
+  bio    : "Freelance tech lead. 15x Microsoft MVP. Pluralsight Author. Manning Author."
   uri: /l/ps-home
   github: sixeyed
   twitter: EltonStoneman
@@ -82,9 +82,9 @@ author:
     - label: "Pluralsight"
       icon: "a-fw fa-regular fa-circle-play"
       url: "/l/ps-home"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/EltonStoneman"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/eltonstoneman/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sixeyed"
