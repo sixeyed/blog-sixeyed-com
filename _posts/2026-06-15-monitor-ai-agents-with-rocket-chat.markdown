@@ -1,5 +1,5 @@
 ---
-title: 'All Agents: Report Back to Me'
+title: 'All Agents Report Back to Me: Monitoring AI Agents with Chat'
 date: '2026-06-15 09:00:00'
 tags:
 - ai
@@ -9,12 +9,12 @@ tags:
 - rocket-chat
 - kubernetes
 - developer-productivity
-description: Run a self-hosted Rocket.Chat server on your LAN so every AI coding agent posts its progress to a team chat - watch long-running sessions from any machine or your phone and reply to steer them.
+description: Run a self-hosted Rocket Chat server so your AI coding agents post progress to one chat — watch long-running sessions from your phone and reply to steer them.
 header:
   teaser: /content/images/2026/06/rocket-chat-demo.png
 ---
 
-I use agents all day, every day. The tools and models keep getting better, but the management experience is still cumbersome - especially if you use different tools and different models on different machines. I'm regularly running multiple Claude Code sessions on different boxes, plus Windsurf (with Claude) and Cline (with Qwen running on my Mac Studio). We get a powerful lot of work done, but I need to keep swapping between machines to check on progress and steer the agents.
+I use agents all day, every day. The tools and models keep getting better, but the management experience is still cumbersome - especially if you use different tools and different models on different machines. I'm regularly [running multiple Claude Code sessions](/ten-tips-claude-code/) on different boxes, plus Windsurf (with Claude) and Cline (with Qwen running on my Mac Studio). We get [a powerful lot of work done](/claude-is-coming-for-your-job/), but I need to keep swapping between machines to check on progress and steer the agents.
 
 > Claude Code, Windsurf and Cline each have an agent view where you can monitor activity across agents. But that's only the agents in _that tool_ on _that machine_. I wanted a universal agent status portal. Which sounds a lot like a chat room.
 
@@ -61,9 +61,11 @@ Agents don't use the browser - they call the REST API which doesn't need a secur
 
 The deployment is built with two front doors:
 
-- **Humans** (web, iOS) connect over **HTTPS** through an nginx ingress, with a certificate signed by my internal CA. Browse to `https://rocketchat.mydomain` and I get the full UI.
-
-- **Agents** connect over plain **HTTP** to a NodePort - `http://192.168.2.xyz:8099` in my setup. API access with no TLS or DNS required.
+| | Humans (web, iOS) | AI agents |
+|---|---|---|
+| Connect over | **HTTPS** through an nginx ingress | plain **HTTP** to a NodePort |
+| Endpoint | `https://rocketchat.mydomain` | `http://192.168.2.xyz:8099` |
+| Needs | a CA-signed certificate and DNS (browser secure context) | nothing but the server's IP - no TLS, no DNS |
 
 It's the same Rocket.Chat instance behind both doors. The split is just about access paths: one needs a trusted certificate for the clients, the other doesn't because it's just for the API. They are not interchangeable - if you try to browse to the IP endpoint you'll see the UI is broken. If you point an agent at the HTTPS endpoint it will need to have the CA cert approved and be able to reach the domain.
 
@@ -81,7 +83,6 @@ I have this set up so all agents post to one _channel_ in Rocket.Chat, but with 
 The skill tells agents to generate a discussion name unless the user provides one, in which case they should check for existing sessions instead of creating a new one. 
 
 > Rocket.Chat does let you have multiple discussions with identical names. Sometimes agents get confused and create a new discussion with the same name, but you can work around that by being stricter with your prompts.
-
 
 ## The post-chat skill
 
@@ -159,11 +160,22 @@ Once the server's up, connecting an agent is three steps:
 
 That's it. From then on, every long-running job shows up in the sidebar as its own discussion, ticking over with status updates, and you can jump in to steer any of them from your phone (if the tooling supports it).
 
-## Where this leaves you
+## FAQ
 
-I've been waiting for the Universal Control Plane of All Agents to land, but until someone builds it this is a pretty good attempt. The agent interfaces in Claude Code and Windsurf are pretty good. The [Kanban view in Cline](https://cline.bot/blog/announcing-kanban) is a great approach. But they're all tied to a single-platform single-machine environment.
+**Do I need Kubernetes to run this?**
+The reference deployment is a Helm chart, and the demo runs on a local k3d cluster, so you need Kubernetes for this exact setup. But there's nothing special about the architecture - it's just Rocket.Chat and MongoDB, so any Rocket.Chat install works just as well. The agent side only talks to the REST API, so it doesn't care how the server is hosted.
 
-This approach fixes that, but it's not a perfect solution. The control channel feature depends on the smarts of the tooling, and the security model is "trust your internal network" (which you shouldn't trust). But the building blocks are all standard - Rocket.Chat, a Helm chart, a REST API and a skill - and you can adapt it all to whatever security level and extra features you want.
+**Can agents connect over HTTPS instead of plain HTTP?**
+Yes. The HTTPS endpoint serves the API too, so an agent can use it - but then that machine needs to trust your CA and resolve the domain. Plain HTTP over the NodePort skips all of that, which is why it's the easier path for machines scattered across your network.
+
+**Is the two-way control channel safe on a shared network?**
+Not really - treat it as internal-only. Replies from the controller account are executed verbatim, secured by nothing more than the controller's user id and the room's access control - there's no command verification. That's fine on a trusted LAN, but LANs aren't actually that trustworthy and you definitely shouldn't expose it to a wider network. If you want it tighter, you can extend the skill to limit the actions it will take (or remove the control channel feature altogether).
+
+## Where this takes you
+
+I've been waiting for the Universal Control Plane of All Agents to land, but until someone builds it this is a pretty good attempt. The agent interfaces in Claude Code and Windsurf are good. The [Kanban view in Cline](https://cline.bot/blog/announcing-kanban) is a great approach. But they're all tied to a single-platform single-machine environment.
+
+This approach fixes that, but it's not a perfect solution. The control channel feature depends on the smarts of the tooling, and the security model is "trust your internal network" (which you shouldn't). But the building blocks are all standard - a chat server with a REST API and a skill - and you can adapt it all to whatever security level and extra features you want.
 
 The reference deployment, the chart, and the skill are all in the repo:
 
