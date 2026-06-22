@@ -16,13 +16,15 @@ header:
 
 I use agents all day, every day. The tools and models keep getting better, but the management experience is still cumbersome - especially if you use different tools and different models on different machines. I'm regularly [running multiple Claude Code sessions](/ten-tips-claude-code/) on different boxes, plus Windsurf (with Claude) and Cline (with Qwen running on my Mac Studio). We get [a powerful lot of work done](/claude-is-coming-for-your-job/), but I need to keep swapping between machines to check on progress and steer the agents.
 
-> Claude Code, Windsurf and Cline each have an agent view where you can monitor activity across agents. But that's only the agents in _that tool_ on _that machine_. I wanted a universal agent status portal. Which sounds a lot like a chat room.
+Claude Code, Windsurf and Cline each have an agent view where you can monitor activity across agents. But that's only the agents in _that tool_ on _that machine_. I wanted a universal agent status portal. Which sounds a lot like a chat room.
+{: .notice--info}
 
 The chat room idea works really nicely. You can kick off a long session - implementing a feature, monitoring a deployment, running a performance test - and tell the agent to use a skill to post updates to a discussion on the chat server. Each agent gets their own ID and each task gets its own discussion, so you can watch everything go from a central machine. Or when you leave the office for the evening, you can check in all those remote agents on your phone.
 
 This post walks through the setup: a lightweight [Rocket.Chat](https://rocket.chat) server running on my internal network that every agent posts to, plus a skill that wraps it so any agent can create a discussion, post updates, and take instructions back. The whole thing is in a reference repo on GitHub:
 
-> [sixeyed/agent-chat](https://github.com/sixeyed/agent-chat)
+[sixeyed/agent-chat](https://github.com/sixeyed/agent-chat)
+{: .notice--info}
 
 ## Quickstart
 
@@ -74,7 +76,8 @@ It's the same Rocket.Chat instance behind both doors. The split is just about ac
 
 The diagram above shows both paths into the cluster. Click it for the full-size version in the [repo docs](https://github.com/sixeyed/agent-chat/blob/main/docs/agent-chat-architecture.png).
 
-> This gives you secure access for human clients within the network. For external access I use Tailscale - my servers are all registered and the Kubernetes operator is a good fit.
+This gives you secure access for human clients within the network. For external access I use Tailscale - my servers are all registered and the Kubernetes operator is a good fit.
+{: .notice--info}
 
 ## One discussion per session
 
@@ -82,7 +85,8 @@ I have this set up so all agents post to one _channel_ in Rocket.Chat, but with 
 
 The skill tells agents to generate a discussion name unless the user provides one, in which case they should check for existing sessions instead of creating a new one. 
 
-> Rocket.Chat does let you have multiple discussions with identical names. Sometimes agents get confused and create a new discussion with the same name, but you can work around that by being stricter with your prompts.
+Rocket.Chat does let you have multiple discussions with identical names. Sometimes agents get confused and create a new discussion with the same name, but you can work around that by being stricter with your prompts.
+{: .notice--info}
 
 ## The post-chat skill
 
