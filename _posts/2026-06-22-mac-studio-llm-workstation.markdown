@@ -11,6 +11,7 @@ tags:
 - mlx
 - developer-productivity
 description: Why an M4 Max Mac Studio with 128GB of unified memory is the best local LLM workstation for developers - running Qwen3, Ling and Gemma with llama.cpp and MLX.
+image: /content/images/2026/06/openwebui-qwen.png
 header:
   teaser: /content/images/2026/06/openwebui-qwen.png
 faq:

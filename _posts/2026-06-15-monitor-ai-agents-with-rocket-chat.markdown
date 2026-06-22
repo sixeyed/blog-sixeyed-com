@@ -10,6 +10,7 @@ tags:
 - kubernetes
 - developer-productivity
 description: Run a self-hosted Rocket Chat server so your AI coding agents post progress to one chat — watch long-running sessions from your phone and reply to steer them.
+image: /content/images/2026/06/rocket-chat-demo.png
 header:
   teaser: /content/images/2026/06/rocket-chat-demo.png
 faq:

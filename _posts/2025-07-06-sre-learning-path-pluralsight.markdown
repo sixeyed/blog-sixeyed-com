@@ -13,6 +13,7 @@ tags:
 - prometheus
 - grafana
 description: Master Site Reliability Engineering with my new 4-course Pluralsight learning path. Learn Google's SRE practices, monitoring with Prometheus & Grafana, incident management, and production observability through hands-on demonstrations.
+image: /content/images/2025/07/sre-1-hero.png
 header:
   teaser: /content/images/2025/07/sre-1-hero.png
 faq:

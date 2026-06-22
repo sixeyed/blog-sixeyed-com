@@ -14,6 +14,7 @@ tags:
 - vs-code-extensions
 - developer-productivity
 description: Master Claude Code with 10 battle-tested tips from real projects. Learn to run multiple AI agents, delegate effectively, and 10x your dev productivity in 2025.
+image: /content/images/2025/07/claude-code-hero.png
 header:
   teaser: /content/images/2025/07/claude-code-hero.png
 faq:
