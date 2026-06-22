@@ -12,6 +12,29 @@ tags:
 description: Run a self-hosted Rocket Chat server so your AI coding agents post progress to one chat — watch long-running sessions from your phone and reply to steer them.
 header:
   teaser: /content/images/2026/06/rocket-chat-demo.png
+faq:
+  - question: Do I need Kubernetes to run this?
+    answer: >-
+      The reference deployment is a Helm chart, and the demo runs on a local k3d
+      cluster, so you need Kubernetes for this exact setup. But there's nothing
+      special about the architecture - it's just Rocket.Chat and MongoDB, so any
+      Rocket.Chat install works just as well. The agent side only talks to the REST
+      API, so it doesn't care how the server is hosted.
+  - question: Can agents connect over HTTPS instead of plain HTTP?
+    answer: >-
+      Yes. The HTTPS endpoint serves the API too, so an agent can use it - but then
+      that machine needs to trust your CA and resolve the domain. Plain HTTP over the
+      NodePort skips all of that, which is why it's the easier path for machines
+      scattered across your network.
+  - question: Is the two-way control channel safe on a shared network?
+    answer: >-
+      Not really - treat it as internal-only. Replies from the controller account
+      are executed verbatim, secured by nothing more than the controller's user id
+      and the room's access control - there's no command verification. That's fine on
+      a trusted LAN, but LANs aren't actually that trustworthy and you definitely
+      shouldn't expose it to a wider network. If you want it tighter, you can extend
+      the skill to limit the actions it will take (or remove the control channel
+      feature altogether).
 ---
 
 I use agents all day, every day. The tools and models keep getting better, but the management experience is still cumbersome - especially if you use different tools and different models on different machines. I'm regularly [running multiple Claude Code sessions](/ten-tips-claude-code/) on different boxes, plus Windsurf (with Claude) and Cline (with Qwen running on my Mac Studio). We get [a powerful lot of work done](/claude-is-coming-for-your-job/), but I need to keep swapping between machines to check on progress and steer the agents.

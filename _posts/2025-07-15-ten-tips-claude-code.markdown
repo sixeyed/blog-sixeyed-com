@@ -16,6 +16,29 @@ tags:
 description: Master Claude Code with 10 battle-tested tips from real projects. Learn to run multiple AI agents, delegate effectively, and 10x your dev productivity in 2025.
 header:
   teaser: /content/images/2025/07/claude-code-hero.png
+faq:
+  - question: Is Claude Code free to use?
+    answer: >-
+      Claude Code offers a free tier with limited usage. Paid plans provide higher
+      limits and access to more powerful models like Opus 4.
+  - question: Does Claude Code work with any language?
+    answer: >-
+      Yes! Claude Code supports all major programming languages including Python,
+      Java, C#, Go, Rust, and more.
+  - question: Can Claude Code work with existing codebases?
+    answer: >-
+      Absolutely. Claude Code can analyze and modify existing code. The CLAUDE.md
+      file helps it understand your project structure and conventions.
+  - question: How does Claude Code compare to GitHub Copilot?
+    answer: >-
+      While Copilot offers inline suggestions, Claude Code works at a higher level -
+      managing entire features and projects through conversation. It's more like
+      having an AI pair programming partner who can handle complex, multi-file tasks.
+  - question: Can I use Claude Code for production applications?
+    answer: >-
+      Yes, but always review Claude's code thoroughly. Treat it like any code review
+      - check for security issues, performance concerns, and adherence to your coding
+      standards.
 ---
 
 [Claude Code](https://www.anthropic.com/claude-code) is Anthropic's agentic coding tool that transforms AI pair programming. It lets you delegate development tasks directly from your VS Code terminal - you describe what you want, and a team of Claudes build it while you focus on the bigger picture. 

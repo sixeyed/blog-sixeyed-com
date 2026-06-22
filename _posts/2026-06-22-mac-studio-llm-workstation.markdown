@@ -52,19 +52,17 @@ Frontier AI models from Anthropic, OpenAI etc. are closed source: they run in th
 
 You don't need super high-end kit to run a local model, and in the latest VS Code release you can use Copilot directly with your own LLM. No prompts or responses ever leave your network, you're not charged for any tokens, no presidents can turn off your access, and your data won't be used to train the next generation.
 
-**TL;DR:** The M4 Max Mac Studio with 128GB of unified memory is a great LLM workstation for developers. The unified memory lets it load models a dual-GPU PC physically can't, its memory bandwidth makes inference faster than equivalent boxes, and it runs silently on a very small power draw. I run Qwen3, Ling and Gemma on it with llama.cpp and MLX, and `qwen3.6-moe` is fast and capable enough for daily coding.
-{: .notice--info}
-
 I started running smaller models on my old M1 Mac Studio last year and hit two problems: 64GB of memory is not enough to run a high-fidelity model, and the speed and number of GPU cores on my box meant responses were too slow for daily use. So I did a bunch of research and finally settled on what I think is the best box for local inference: a newer Mac Studio :)
 
 The Mac Studio M4 Max with 128GB of unified memory is a very performant LLM workstation. It's Apple Silicon, which is ARM64 architecture - and that runs efficiently. It's quieter, cooler and cheaper to run than the alternatives, and far simpler to buy than to build something yourself.
 
 Actually you can't buy it today. I bought mine at the end of 2025, and I had the choice of M4 Max up to 128GB or M3 Ultra up to 512GB. Now the RAM shortage has even hit Apple and 96GB is the most you can buy (and prices are going up). It's not clear if the M5 Max/Ultra Studios will launch this year, and how much RAM they'll have if they do.
-{: .notice--warning}
+{: .notice--info}
 
-As I write you can still order an M5 Max MacBook Pro with 128GB. If you can get hold of a suitable machine, you can use the scripts and config on my repo to get up and running quickly: [sixeyed/local-llms on GitHub](https://github.com/sixeyed/local-llms).
+As I write you can get an M5 Max MacBook Pro with 128GB. If you can get hold of a suitable machine, you can use the scripts and config on my repo to get up and running quickly: [sixeyed/local-llms on GitHub](https://github.com/sixeyed/local-llms).
 
-
+**TL;DR:** The M4 Max Mac Studio with 128GB of unified memory is the best local LLM workstation for developers right now. The unified memory lets it load models a dual-GPU PC physically can't, its memory bandwidth makes inference faster than equivalent boxes, and it runs silently on a very small power draw. I run Qwen3, Ling and Gemma on it with llama.cpp and MLX, and `qwen3.6-moe` is fast and capable enough for daily coding.
+{: .notice--info}
 
 ## Apple's unified memory architecture
 

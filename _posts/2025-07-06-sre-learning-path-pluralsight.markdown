@@ -15,6 +15,23 @@ tags:
 description: Master Site Reliability Engineering with my new 4-course Pluralsight learning path. Learn Google's SRE practices, monitoring with Prometheus & Grafana, incident management, and production observability through hands-on demonstrations.
 header:
   teaser: /content/images/2025/07/sre-1-hero.png
+faq:
+  - question: Do I need prior SRE experience to take these courses?
+    answer: >-
+      No, the first course starts with fundamentals. Basic software development and
+      deployment knowledge is helpful.
+  - question: What tools will I learn?
+    answer: >-
+      Prometheus, Grafana, Elasticsearch, Kibana, Tempo, OpsGenie, and modern AIOps
+      platforms like Datadog.
+  - question: How long does the complete learning path take?
+    answer: >-
+      The four courses total approximately 6 hours, designed to be completed over 2-3
+      weeks.
+  - question: Is this Google's exact SRE approach?
+    answer: >-
+      These courses teach the core SRE principles Google pioneered, adapted for use
+      in any size of organization.
 ---
 
 [Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/) is how Google runs production systems, and it's becoming the standard approach for managing complex applications at scale. I've just published the first two courses in a new [SRE learning path on Pluralsight](/l/ps-sre-path), with two more courses coming soon to complete the path.
