@@ -63,7 +63,7 @@ faq:
 - [Fleet Operations](https://www.nscale.com/blog/fleet-operations)
 - [The Lifecycle of a Node](https://www.nscale.com/blog/lifecycle-of-a-node) 
 
-This looks like it runs on Kubernetes and there are parts of the stack I'm very familiar with from production systems, plus some equivalents I've used at home (MAAS, OpenStack), and some I haven't used at all (Temporal). It looked like a good learning opportunity, so I spent a couple of weeks with Claude researching and building out my own implementation which is here on GitHub:
+There are parts of the stack I'm very familiar with from production systems, plus some equivalents I've used at home (MAAS, OpenStack), and some I haven't used at all (Temporal). It looked like a good learning opportunity, so I spent a couple of weeks with Claude researching and building out my own implementation which is here on GitHub:
 
 [sixeyed/fleet-lab](https://github.com/sixeyed/fleet-lab) - fleet provisioning for a home lab
 {: .notice--info}
@@ -74,7 +74,7 @@ What does it do? There's a local k3d version you can run which stubs out the int
 {: .notice--info}
 
 ![The Fleet Manager detail page for a node, showing its lifecycle progress and the Temporal workflows that drove it](/content/images/2026/06/fleet-nuc-01.png)
-{: alt="Fleet Manager machine detail page for the node 'large-foal', showing a six-phase lifecycle bar (New, Commissioned, Deployed, Provisioned, Registered, Active), workload controls for allocating and releasing, and a table of completed Temporal workflows (RegisterCompute, BurnInMachine, DeployMachine, ProvisionMachine) each linking to the Temporal Web UI"}
+{: alt="Fleet Manager machine detail page for the node 'large-foal' at 10.50.0.251 with 4 CPU and 12 GB, MAAS status Deployed, showing a six-phase lifecycle bar (New, Commissioned, Deployed, Provisioned, Registered, Active), the node running the apache workload at 10.50.0.210, Reprovision and Recommission buttons, and a table of completed Temporal workflows (AllocateWorkload, DeallocateWorkload, ReallocateWorkload, RegisterCompute, BurnInMachine, DeployMachine, ProvisionMachine) each linking to the Temporal Web UI"}
 
 ## The physical architecture
 
