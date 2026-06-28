@@ -56,7 +56,12 @@ redirects:
   - slug: github
     url: https://github.com/sixeyed
     description: GitHub profile
-    
+
+  # Blog post short links
+  - slug: fleet-lab
+    url: /nscale-fleet-operations-home-lab/
+    description: Short link to the "Exploring Nscale's Fleet Operations in a Home Lab" post
+
   - slug: linkedin
     url: https://www.linkedin.com/in/eltonstoneman/
     description: LinkedIn profile
