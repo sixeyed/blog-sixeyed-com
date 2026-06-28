@@ -1,6 +1,6 @@
 ---
 title: "Exploring Nscale's Fleet Operations - in a Home Lab"
-date: '2026-06-29 09:00:00'
+date: '2026-06-28 20:00:00'
 tags:
 - homelab
 - bare-metal
